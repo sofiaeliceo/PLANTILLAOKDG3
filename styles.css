@@ -1,0 +1,3248 @@
+/* 1. VARIABLES DE DISEÑO */
+:root {
+  --primary-color: #47b2e4;
+  --secondary-color: #6c757d;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --font-family-base: 'Poppins', sans-serif;
+}
+
+/* 2. ESTILOS GENERALES */
+body {
+  font-family: var(--font-family-base);
+  color: #212529;
+  background-color: #F4F2EA;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* 3. NAVBAR */
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 15px 0;
+}
+
+.navbar.scrolled {
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--dark-color);
+}
+
+.nav-link {
+  color: var(--dark-color);
+  font-weight: 500;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* 4. HERO */
+.row.p-5 {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+
+p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Botones */
+.btn {
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-dark {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: #369cc5;
+}
+
+.btn-outline-dark {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* 5. SECCIONES */
+section {
+  padding: 100px 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 20px auto 0;
+}
+
+/* 6. CARDS */
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.masonry__container {
+  column-count: 4;
+  column-gap: 1rem;
+}
+
+.masonry__item {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.card-text {
+  color: #6c757d;
+}
+
+/* 7. TESTIMONIOS */
+.blockquote {
+  background-color: var(--light-color);
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* 8. FORMULARIO */
+form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+form button.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  width: 100%;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+/* 9. FOOTER */
+footer {
+  background-color: var(--dark-color);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+/* 10. IMÁGENES */
+img.rounded-circle {
+  border: 5px solid var(--light-color);
+}
+
+/* 11. GALERÍA */
+.container .row img {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container .row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================== */
+/* CUSTOM HELPER CLASSES */
+/* ============================== */
+
+/* ============================== */
+/* CUSTOM HELPER CLASSES */
+/* ============================== */
+
+/* TITULOS */
+.h1-custom {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dark-color);
+}
+
+.h2-custom {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--dark-color);
+}
+
+.h3-custom {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--dark-color);
+}
+
+.h4-custom {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+/* PÁRRAFOS Y TEXTOS */
+.p-custom {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+/* FONDOS E IMÁGENES */
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-overlay-light {
+  background-color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(5px);
+}
+
+.bg-overlay-dark {
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+
+.img-rounded {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* TEXTOS ADICIONALES */
+.text-uppercase-custom {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-muted-custom {
+  color: #6c757d;
+}
+
+/* ESPACIADOS */
+.section-spacing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-spacing-sm {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+/* ============================== */
+/* MEDIA QUERIES */
+/* ============================== */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .masonry__container {
+    column-count: 3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .masonry__container {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .masonry__container {
+    column-count: 1;
+  }
+}
+/* 1. Variables de tipografía */
+:root {
+  --font-family-titulos: "Raleway", sans-serif;
+  --font-family-textos: "Plus Jakarta Sans", sans-serif;
+}
+
+/* 2. Por defecto, los textos usan Plus Jakarta Sans */
+body {
+  font-family: var(--font-family-textos);
+  /* ... el resto de tu body puede quedar igual */
+}
+
+/* 3. Títulos con Raleway */
+h1, h2, h3, h4, h5, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
+  font-family: var(--font-family-titulos);
+}
+
+/* Si querés algún texto puntual con Plus Jakarta Sans, usá: */
+.p-custom, .lead-custom, p, li, a, label, input, textarea {
+  font-family: var(--font-family-textos);
+}
+.btns-stack {
+  display: flex;
+  flex-direction: row !important; /* Fuerza horizontal */
+  gap: 21px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 24px;  /* Ajusta el aire arriba */
+  margin-bottom: 50px;
+}
+
+.btn-pill-yellow,
+.btn-pill-outline-blue {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 500;
+  font-size: 19px;
+  display: inline-flex;
+  align-items: center;
+  gap: 26px;
+  padding: 20.69px 34.49px;
+  border-radius: 100px !important;
+  border: none;
+  text-decoration: none !important;
+  box-shadow: none;
+  transition: background 0.17s, color 0.17s;
+  line-height: 1.18;
+  min-width: 0; /* No se estiran al 100% */
+  max-width: 100%;
+}
+
+.btn-pill-yellow {
+  background: #FFD008 !important;
+  color: #30302E !important;
+}
+
+.btn-pill-yellow:hover,
+.btn-pill-yellow:focus {
+  background: #e6c200 !important;
+  color: #30302E !important;
+}
+
+.btn-pill-outline-blue {
+  background: transparent !important;
+  color: #5089D3 !important;
+  border: 2.5px solid #5089D3 !important;
+  box-shadow: none;
+}
+
+.btn-pill-outline-blue:hover,
+.btn-pill-outline-blue:focus {
+  background: #5089D3 !important;
+  color: #F4F2EA !important;
+  border-color: #5089D3 !important;
+}
+
+.btn-pill-outline-blue .divider {
+  background: #5089D3;
+}
+.btn-pill-yellow .divider {
+  background: #222;
+}
+
+.btn-pill-yellow .divider,
+.btn-pill-outline-blue .divider {
+  display: inline-block;
+  width: 2px;
+  height: 36px;
+  border-radius: 2px;
+  margin: 0 3px;
+  opacity: 1;
+  background: currentColor;
+}
+
+.btn-pill-outline-blue:hover .divider,
+.btn-pill-outline-blue:focus .divider {
+  background: #fff;
+}
+
+.btn-pill-yellow i,
+.btn-pill-outline-blue i {
+  font-size: 26px;
+  font-weight: 400;
+  vertical-align: middle;
+  margin-left: 0;
+  transition: color 0.18s;
+}
+
+.btn-pill-outline-blue i {
+  color: #5089D3;
+}
+
+.btn-pill-outline-blue:hover i,
+.btn-pill-outline-blue:focus i {
+  color: #fff;
+}
+
+/* Sin subrayado nunca */
+.btn-pill-yellow,
+.btn-pill-outline-blue,
+.btn-pill-yellow:hover,
+.btn-pill-outline-blue:hover {
+  text-decoration: none !important;
+}
+
+/* NO uses width: 100% en los botones, ni display: block, ni d-block */
+
+/* RESPONSIVE: solo se achican, NO se apilan */
+@media (max-width: 600px) {
+  .btns-stack {
+    gap: 8px;
+    justify-content: center;
+    flex-direction: row !important; /* Fuerza horizontal también en mobile */
+  }
+  .btn-pill-yellow,
+  .btn-pill-outline-blue {
+    font-size: 15px;
+    padding: 10px 18px;
+    gap: 13px;
+  }
+  .btn-pill-yellow i,
+  .btn-pill-outline-blue i {
+    font-size: 18px;
+  }
+  .btn-pill-yellow .divider,
+  .btn-pill-outline-blue .divider {
+    height: 20px;
+    margin: 0 8px;
+  }
+}
+/* VOLANTA */
+.volanta-custom {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.25em;     /* 25% de tracking */
+  color: #30302E;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+/* TITULO HERO */
+.hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 115px;
+  color: #5089D3;
+  line-height: 1.03;
+  letter-spacing: -0.017em;   /* -1.7% de tracking */
+  margin-bottom: 28px;
+  margin-top: 0;
+}
+
+/* PÁRRAFO HERO */
+.hero-lead {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  color: #30302E;
+  line-height: 1.37;           /* 37% de interlineado */
+  letter-spacing: 0em;         /* Si el figma pide más, subilo */
+  margin-bottom: 36px;
+  margin-top: 0;
+  max-width: 700px;
+}
+
+/* AJUSTES RESPONSIVE */
+@media (max-width: 1000px) {
+  .hero-title {
+    font-size: 64px;
+  }
+  .volanta-custom {
+    font-size: 16px;
+  }
+  .hero-lead {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 38px;
+    line-height: 1.07;
+  }
+  .volanta-custom {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+  }
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.32;
+    margin-bottom: 22px;
+  }
+}
+
+/* PARA SACAR ESPACIOS EXTRAS ENTRE BLOQUES */
+.hero-section .container {
+  padding-top: 48px;
+  padding-bottom: 12px;
+}
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 1080px;
+  width: 100vw;           /* Full ancho viewport */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  /* Estas 4 líneas logran "full bleed" aun dentro de un .container */
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 1;
+  background: url('IMAGENES/FONDO1.jpg') no-repeat center center;
+  background-size: contain;  /* o cover, si lo preferís */
+  opacity: 1;
+  pointer-events: none;
+}
+
+.hero-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    min-height: 600px;
+  }
+  .hero-bg {
+    background-size: cover;
+    background-position: center top;
+  }
+}
+@media (max-width: 600px) {
+  .hero-section {
+    min-height: 420px;
+  }
+}
+/* Fondo y línea superior */
+.navbar-custom {
+  background: #F4F2EA !important;
+  border-top: 0px solid #0000;  /* O el color que uses para esa "linea" sutil */
+  box-shadow: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Logo */
+.navbar-logo {
+  max-height: 30px;    /* Ajustalo según tu PNG */
+  width: auto;
+  margin-right: 8px;
+}
+
+/* Tipografía y espacio menú */
+.navbar-nav .nav-link {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #30302E;
+  margin-left: 20px;
+  margin-right: 0;
+  transition: color .2s;
+  letter-spacing: 0.02em;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #5089D3 !important;
+  text-decoration: none;
+}
+
+/* Botón celeste */
+.btn-navbar-cta {
+  background: #5089D3;
+  color: #fff !important;
+  border-radius: 30px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px 33px;
+  margin-left: 28px;
+  box-shadow: none;
+  border: none;
+  transition: background .16s, color .16s;
+  outline: none !important;
+  letter-spacing: 0.01em;
+}
+.btn-navbar-cta:hover,
+.btn-navbar-cta:focus {
+  background: #376dc2;
+  color: #fff;
+}
+
+/* Responsive: achicá el logo y los márgenes en mobile */
+@media (max-width: 991px) {
+  .navbar-logo { max-height: 28px; }
+  .navbar-nav .nav-link { margin-left: 12px; }
+  .btn-navbar-cta { margin-left: 12px; padding: 8px 22px; }
+}
+/* Estilo general del botón hamburguesa */
+.custom-toggler {
+  border: 2px solid #5089D3 !important;   /* Borde celeste */
+  border-radius: 50px !important;         /* Redondo/circular */
+  background: #F4F2EA !important;         /* Fondo igual a la navbar */
+  padding: 12px 12px !important;
+  outline: none !important;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+
+/* El icono hamburguesa en celeste */
+.custom-toggler .navbar-toggler-icon {
+  background-image: none !important;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  position: relative;
+}
+
+.custom-toggler .navbar-toggler-icon::before,
+.custom-toggler .navbar-toggler-icon::after,
+.custom-toggler .navbar-toggler-icon span {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+  background: #5089D3;           /* Celeste */
+  position: absolute;
+  left: 2px;
+  transition: all .2s;
+}
+
+/* Lineas de la hamburguesa: arriba, medio, abajo */
+.custom-toggler .navbar-toggler-icon::before {
+  top: 6px;
+}
+.custom-toggler .navbar-toggler-icon span {
+  top: 13px;
+}
+.custom-toggler .navbar-toggler-icon::after {
+  top: 20px;
+}
+/* Volanta */
+.volanta-custom {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #30302E;
+  letter-spacing: 0.25em;
+  opacity: 1;
+  margin-bottom: 30px; /* 30px de separación abajo */
+  display: block;
+}
+
+/* Título HERO */
+.hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 115px;
+  font-weight: 700;
+  color: #5089D3;
+  letter-spacing: -0.017em; /* -1.7% */
+  line-height: 100px; /* Menos interlinea */
+  margin-bottom: 30px; /* 30px de separación abajo */
+}
+
+/* Párrafo hero */
+.hero-lead {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #30302E;
+  line-height: 37px;           /* 37% de interlinea (line-height: 1.37) */
+  letter-spacing: 0em;
+  margin-bottom: 30px;         /* 30px de separación abajo */
+  max-width: 540px;            /* Opcional, para no quede tan ancho */
+}
+
+/* Botones: 30px de separación arriba del stack */
+.btns-stack {
+  display: flex;
+  gap: 20px;      /* Espacio entre los botones */
+  margin-top: 30px;
+}
+
+/* Responsive Título (¡clave para mobile!) */
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.08;
+  }
+}
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 34px;
+    line-height: 1.09;
+  }
+  .hero-lead, .volanta-custom {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+  .btns-stack {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 18px;
+  }
+}
+.hero-lead .resaltado {
+  font-weight: 600;
+}
+.hero-title {
+  font-size: clamp(95px, 9vw, 115px); /* Mínimo 40px, ideal 9% del viewport, máximo 115px */
+  line-height: 100px;
+  /* ...otros estilos que ya tengas */
+}
+.stats-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;         /* Espacio entre stats en desktop */
+  margin: 70px auto 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 130px;
+}
+
+.stat-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #5089D3;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.stat-plus {
+  color: #5089D3;
+  font-weight: 700;
+  font-size: 0.95em;
+}
+
+.stat-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #222;
+  margin-top: 7px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .stats-row {
+    gap: 34px;
+    max-width: 99vw;
+  }
+  .stat-number {
+    font-size: 34px;
+  }
+  .stat-label {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    margin-top: 50px;
+  }
+  .stat-item {
+    min-width: unset;
+  }
+  .stat-number {
+    font-size: 28px;
+  }
+  .stat-label {
+    font-size: 15px;
+  }
+}
+
+
+/* Volanta - quienes somos */
+.volanta-quienes {
+  text-transform: uppercase;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: #30302E;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+/* Título principal quienes somos */
+.h2-quienes {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #5089D3;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Elimina cualquier línea después del título */
+.h2-quienes::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Párrafo quienes somos */
+.parrafo-quienes {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: px;
+  line-height: 37px;
+  color: #30302E;
+  margin-bottom: 30px;
+  max-width: 560px;
+}
+.container {
+  max-width: 1600px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+@media (max-width: 767px) {
+  .container {
+    padding-left: 50px !important;
+    padding-right:50px !important;
+  }
+}
+.valores-section {
+  color: #fff !important; /* Todos los textos blancos */
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.volanta-quienes {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: #fff !important;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.valores-title {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-bottom: 38px;
+}
+
+.valores-nombre {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.valores-desc {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 1.16rem;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.98;
+  margin-bottom: 0;
+}
+
+.valores-icon {
+  width: 180px;   /* Ajustá el tamaño según tu PNG */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+/* Aplica a la sección que tiene la imagen de fondo */
+.bg-cover {
+  background-size: contain !important;   /* QUE LA IMAGEN SE VEA ENTERA */
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  min-height: 100vh;  /* Ocupa toda la altura de la ventana */
+}
+.quienes-section {
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  min-height: 850px;
+  display: flex;
+  align-items: center;
+}
+.volanta-quienes {
+  color: #30302E !important;
+  font-family: 'Raleway', 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  opacity: 1;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 991px) {
+  .quienes-section { min-height: 500px; }
+  .volanta-quienes { font-size: 16px; }
+}
+/* SOLO PARA LA SECCIÓN DE VALORES */
+.valores-section {
+  color: #fff;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  min-height: 850px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* VOLANTA */
+.valores-volanta {
+  font-family: 'Raleway', 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 21px;
+  color: #fff;
+  opacity: 0.95;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+/* TÍTULO */
+.valores-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -1px;
+  margin-bottom: 40px;
+  position: static;      /* SACA LA LINEA AZUL */
+}
+
+.valores-title::after {
+  display: none !important;   /* Por si Bootstrap mete la línea */
+  content: none !important;
+}
+
+/* SUBTÍTULOS */
+.valores-subtitulo {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* DESCRIPCIÓN */
+.valores-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.14rem;
+  color: #fff;
+  opacity: 0.96;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* RECTANGULO IMAGEN */
+.valores-rectangulo {
+  background: none;
+  border-radius: 24px;
+  width: 305px;
+  height: 313px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  box-shadow:none;
+}
+
+.valores-rectangulo img {
+  max-width: 210px;
+  max-height: 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px #0002);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .valores-rectangulo {
+    width: 220px;
+    height: 230px;
+  }
+  .valores-title { font-size: 2rem; }
+  .valores-subtitulo { font-size: 1.2rem; }
+}
+
+@media (max-width: 600px) {
+  .valores-section {
+    min-height: 450px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .valores-rectangulo {
+    width: 160px;
+    height: 150px;
+    margin-bottom: 16px;
+  }
+  .valores-title { font-size: 1.25rem; }
+  .valores-subtitulo { font-size: 1rem; }
+  .valores-volanta { font-size: 13px; }
+}
+.paso-card-custom {
+  background-image: url('IMAGENES/cartel\ 4.svg');
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1px;
+  padding: 10px 32px;
+  margin-bottom: 10px;
+}
+
+.paso-numero-custom {
+  background: #5089D3;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.paso-texto-custom {
+  font-size: 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #30302E;
+  font-weight: 600;
+}
+.section-spacing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.volanta-custom {
+  font-family: 'Plus Jakarta Sans', 'Raleway', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.23em;
+  color: #30302E;
+  text-transform: uppercase;
+  opacity: 0.84;
+  margin-bottom: 22px;
+  display: block;
+}
+.h2-custom {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #5089D3;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  position: static;
+}
+.h2-custom::after {
+  display: none !important;
+  content: none !important;
+}
+.volanta-quienes {
+  font-family: 'Plus Jakarta Sans', 'Raleway', Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: #30302E;
+  opacity: 0.90;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.h2-quienes {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #5089D3;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  line-height: 1.13;
+  position: static;
+}
+.h2-quienes::after {
+  display: none !important;
+  content: none !important;
+}
+@media (max-width: 767px) {
+  .h2-quienes {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .volanta-quienes {
+    font-size: 15px;
+    margin-bottom: 7px;
+    letter-spacing: 0.13em;
+  }
+  .paso-card-custom {
+    min-height: 60px;
+    font-size: 1rem;
+    padding: 0 12px;
+  }
+  .paso-numero-custom {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+}
+.section-suscripcion {
+  padding: 120px 0 120px 0;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: 100vh;
+}
+
+.volanta-suscripcion {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.21em;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.87;
+  margin-bottom: 14px;
+}
+
+.h2-suscripcion {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 2.8rem;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+  position: static;
+}
+.h2-suscripcion::after {
+  display: none !important;
+}
+
+/* Card general */
+.suscrip-card-custom {
+  background: #f8f7f2;
+  border-radius: 32px;
+  box-shadow: 0 6px 48px 0 rgba(80, 137, 211, 0.07);
+  padding: 36px 38px 42px 38px;
+  min-width: 320px;
+  max-width: 537px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 820px;
+  border: none;
+  transition: box-shadow 0.22s;
+}
+.suscrip-card-custom.destacado {
+  border: 2.5px solid #5089D3;
+  box-shadow: 0 12px 58px 0 rgba(80,137,211,0.18);
+}
+@media (max-width: 991px) {
+  .suscrip-card-custom {
+    max-width: 95vw;
+    min-width: unset;
+    padding: 30px 12px;
+    min-height: 0;
+  }
+}
+.volanta-box {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #5089D3;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+.suscrip-titulo {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #5089D3;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+.suscrip-precio {
+  color: #5089D3;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  margin-top: 2px;
+}
+.precio-mes {
+  font-size: 1.05rem;
+  color: #9bb6db;
+  font-weight: 600;
+  margin-left: 4px;
+}
+.suscrip-descripcion {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.13rem;
+  color: #222;
+  margin-bottom: 14px;
+}
+.suscrip-lista {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.suscrip-lista li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.09rem;
+  color: #2a2931;
+  padding: 11px 0;
+  border-bottom: 1px solid #e1e6ee;
+  font-weight: 400;
+}
+.suscrip-lista li:last-child {
+  border-bottom: none;
+}
+.check {
+  color: #5089D3;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+.cross {
+  color: #ccc;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+/* Botón bien ancho y estirado */
+.btn-suscrip {
+  background: #FFD008 !important;
+  color: #3B3B39 !important;
+  border-radius: 100px !important;
+  font-size: 21px;
+  font-weight: 500;
+  padding: 20px 0 !important;
+  width: 100%;
+  max-width: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  transition: background 0.16s;
+}
+.btn-suscrip:hover,
+.btn-suscrip:focus {
+  background: #ffce00 !important;
+  color: #3B3B39 !important;
+}
+
+/* Divider botón */
+.btn-suscrip .divider {
+  display: inline-block;
+  width: 2px;
+  height: 28px;
+  background: #222;
+  margin: 0 9px;
+  opacity: 0.7;
+}
+
+.btn-suscrip i {
+  font-size: 25px;
+  margin-left: 0;
+}
+
+@media (max-width: 991px) {
+  .section-suscripcion {
+    padding: 58px 0 60px 0;
+  }
+}
+.section-maridaje-fichas {
+  padding: 110px 0 90px 0;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.volanta-maridaje {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #30302E;
+  font-size: 20px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: 0.73;
+  margin-bottom: 8px;
+}
+.h2-maridaje {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #5089D3;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+.card-img-postal {
+  width: 340px;
+  height: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-img-postal .card-postal-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.card-img-postal .card-postal-content {
+  position: absolute;
+  z-index: 2;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: contain;
+  padding: 30px;
+}
+.volanta-maridaje-sec {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #30302E;
+  font-size: 20px;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  font-weight: 00;
+  opacity: 0.78;
+  margin-bottom: 6px;
+}
+.h3-maridaje {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #5089D3;
+  font-size: 1.37rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.18;
+}
+.btn-maridaje {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  background: #FFD008 !important;
+  color: #3B3B39 !important;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 5%);
+}
+.btn-maridaje:hover,
+.btn-maridaje:focus {
+  background: #ffce00 !important;
+  color: #3B3B39 !important;
+}
+@media (max-width: 991px) {
+  .section-maridaje-fichas { padding: 55px 0 48px 0; }
+  .card-img-postal { width: 90vw; max-width: 340px; height: auto; }
+}
+@media (max-width: 767px) {
+  .section-maridaje-fichas { padding: 30px 0 20px 0; }
+  .h2-maridaje { font-size: 1.2rem; }
+  .h3-maridaje { font-size: 1rem; }
+}
+.galeria-postal-section {
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0 80px 0;
+}
+
+.volanta-galeria {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #222;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: 0.75;
+  text-align: center;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.h2-galeria {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #3587d1;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin-bottom: 38px;
+  /* SIN línea debajo, forzamos que no la meta ningún otro h2 */
+  position: static !important;
+}
+.h2-galeria::after { display: none !important; content: none !important; }
+
+/* Marco postal */
+.postal-img-wrap {
+  background: url('IMAGENES/postal-borde.png') center/contain no-repeat;
+  width: 305px;
+  height: 313px;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 16px 0 rgba(50, 75, 105, 0.10);
+  border-radius: 12px;
+}
+
+.postal-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: 0 1px 6px 0 rgba(70,70,70,0.07);
+}
+
+/* Responsive grid */
+@media (max-width: 1200px) {
+  .postal-img-wrap { width: 95vw; max-width: 305px; }
+}
+@media (max-width: 991px) {
+  .galeria-postal-section { padding: 60px 0 40px 0; }
+  .h2-galeria { font-size: 1.2rem; }
+  .postal-img-wrap { width: 85vw; max-width: 350px; height: auto; }
+}
+@media (max-width: 768px) {
+  .postal-img-wrap { width: 98vw; max-width: 390px; }
+}
+.footer-f1 {
+  background: #5089d3;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-grape {
+  width: 40px;
+  height: auto;
+}
+
+.footer-frase {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.18;
+}
+
+.footer-mini {
+  font-size: 16px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  opacity: 0.91;
+}
+
+.footer-title {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.06rem;
+  margin-bottom: 7px;
+  letter-spacing: .01em;
+  color: #fff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 7px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.82);
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 1.01rem;
+  text-decoration: none;
+  opacity: 0.92;
+  transition: opacity 0.18s;
+}
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-line {
+  border: none;
+  border-top: 2px solid #F4F2EA
+}
+
+.footer-copy {
+  font-size: 1.01rem;
+  color: #e6ecfa;
+  opacity: 0.96;
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 80%;
+  border: 1.4px solid #fff;
+  color: #fff;
+  font-size: 1.38rem;
+  opacity: 0.95;
+  margin-left: 0;
+  margin-right: 0;
+  transition: background 0.18s, color 0.18s, opacity 0.15s;
+}
+
+.footer-social-link:hover {
+  background: #fff;
+  color: #5089d3;
+  opacity: 1;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .footer-frase { font-size: 1.15rem; }
+  .footer-grape { width: 32px; }
+}
+@media (max-width: 768px) {
+  .footer-f1 { font-size: 1rem; }
+  .footer-social-link { width: 32px; height: 32px; font-size: 1.1rem; }
+  .footer-frase { font-size: 1rem; }
+}
+.fondo-maridajes-y-tarjetas-1-icon {
+  	position: absolute;
+  	bottom: 0px;
+  	left: calc(50% - 960px);
+  	width: 1920px;
+  	height: 1224px;
+  	object-fit: cover;
+}
+.un-plus-en {
+  	align-self: stretch;
+  	position: relative;
+  	letter-spacing: 0.25em;
+  	line-height: 28px;
+  	text-transform: uppercase;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	height: 20px;
+  	flex-shrink: 0;
+}
+.maridajes-de-calidad {
+  	align-self: stretch;
+  	position: relative;
+  	font-size: 40px;
+  	letter-spacing: -0.01em;
+  	line-height: 86%;
+  	display: flex;
+  	color: #5089d3;
+  	align-items: center;
+  	justify-content: center;
+  	height: 46px;
+  	flex-shrink: 0;
+}
+.text-al {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	gap: 30px;
+}
+.text-al-wrapper {
+  	width: 1255px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+}
+.frame-container {
+  	width: 1650px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+}
+.frame-wrapper {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+}
+.maridaje-1-icon {
+  	align-self: stretch;
+  	position: relative;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+}
+.nuestros-maridajes- {
+  	position: relative;
+  	letter-spacing: 0.25em;
+  	line-height: 28px;
+  	text-transform: uppercase;
+}
+.conoc-cmo-cada {
+  	align-self: stretch;
+  	position: relative;
+  	font-size: 40px;
+  	letter-spacing: -0.01em;
+  	line-height: 112%;
+  	display: flex;
+  	color: #5089d3;
+  	align-items: center;
+  	height: 91px;
+  	flex-shrink: 0;
+}
+.text-al-container {
+  	width: 537px;
+  	height: 140px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+}
+.frame-child {
+  	width: 214px;
+  	height: 68px;
+}
+.frame-div {
+  	width: 771px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-end;
+  	justify-content: flex-start;
+  	gap: 20px;
+}
+.maridaje-1-parent {
+  	width: 815px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	gap: 40px;
+}
+.frame-wrapper1 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-end;
+  	justify-content: flex-start;
+}
+.frame-group {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	gap: 20px;
+  	text-align: left;
+}
+.frame-parent {
+  	position: absolute;
+  	top: calc(50% - 483.5px);
+  	left: calc(50% - 825px);
+  	width: 1650px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	gap: 50px;
+}
+.f1-maridajes-y-fichas {
+  	width: 100%;
+  	position: relative;
+  	background-color: #f4f2ea;
+  	height: 1105px;
+  	overflow: hidden;
+  	text-align: center;
+  	font-size: 20px;
+  	color: #30302e;
+  	font-family: Raleway;
+}
+
+.solararrow-up-linear-icon {
+  	width: 24px;
+  	position: relative;
+  	max-height: 100%;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	object-fit: contain;
+}
+.solararrow-up-linear-parent {
+  	width: 100%;
+  	position: relative;
+  	border-radius: 34.5px;
+  	background-color: #ffd008;
+  	height: 69px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 22px;
+  	box-sizing: border-box;
+}
+
+.valores-section {
+  min-height: 100vh;              /* Toda la pantalla */
+  display: flex;                  /* Centra vertical */
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  padding: 0 !important;          /* Saca paddings */
+}
+
+.valores-section .container {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.valores-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.valores-volanta {
+  color: #f3f3f3;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.valores-subtitulo {
+  font-size: 2rem;    /* Bien grandote */
+  font-weight: 700;
+  margin-top: 1.5rem;
+  color: #fff;
+}
+
+.valores-desc {
+  font-size: 1.2rem;  /* 2px más que normal */
+  color: #f3f3f3;
+  opacity: 0.92;
+  margin-bottom: 1.5rem;
+}
+
+.valores-rectangulo img {
+  max-width: 180px;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,0.15));
+}
+
+@media (max-width: 992px) {
+  .valores-section .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .valores-title { font-size: 2rem;}
+  .valores-subtitulo { font-size: 1.5rem;}
+}
+
+@media (max-width: 576px) {
+  .valores-section { min-height: 80vh; }
+  .valores-title { font-size: 1.5rem;}
+  .valores-subtitulo { font-size: 1.1rem;}
+  .valores-rectangulo img { max-width: 120px;}
+}
+/* ==== SECCIÓN VALORES FIEL A FIGMA ==== */
+.valores-section {
+  min-height: 800px; /* Figma height */
+  background-color: #f4f2ea;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.valores-content {
+  max-width: 1650px; /* El ancho total del frame Figma */
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.valores-volanta {
+  letter-spacing: 0.25em;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fff;
+  opacity: none;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+.valores-title {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 0.86;
+  color: #fff;
+  font-family: 'Raleway', Arial, sans-serif;
+  margin-bottom: 30px;
+}
+
+.valores-subtitulo {
+width: 100%;
+position: relative;
+font-size: 40px;
+letter-spacing: -0.01em;
+line-height: 86%;
+display: flex;
+font-family: Raleway;
+color: #fff;
+text-align: center;
+align-items: center;
+justify-content: center;
+height: 21px;
+}
+
+.valores-desc {
+  width: 100%;
+position: relative;
+font-size: 21px;
+line-height: 33px;
+font-family: 'Plus Jakarta Sans';
+color: #fff;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 58px;
+}
+
+.valores-icon img {
+ width: 100%;
+position: relative;
+max-width: 100%;
+overflow: hidden;
+max-height: 100%;
+object-fit: cover;
+}
+
+@media (max-width: 1400px) {
+  .valores-content {
+    max-width: 1200px;
+  }
+  .valores-title { font-size: 32px; }
+  .valores-subtitulo { font-size: 1.5rem; }
+}
+
+@media (max-width: 992px) {
+  .valores-section { min-height: 600px; }
+  .valores-content { max-width: 100%; }
+  .valores-title { font-size: 26px; }
+  .valores-subtitulo { font-size: 1.2rem; }
+  .valores-desc { font-size: 18px; }
+  .valores-icon img { max-width: 160px; }
+  .row.gx-5 { --bs-gutter-x: 1.5rem; }
+}
+
+@media (max-width: 576px) {
+  .valores-section { min-height: 450px; }
+  .valores-title { font-size: 19px; }
+  .valores-subtitulo { font-size: 1rem; }
+  .valores-desc { font-size: 15px; }
+  .valores-icon img { max-width: 100px; }
+}
+/* IMÁGENES GRANDES Y ESPACIADAS */
+.valores-icon img {
+  display: block;
+  max-width: 1000px;   /* Cambiá a 360px si querés más grande */
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 24px; /* Espacio abajo de la imagen */
+}
+
+/* SEPARACIÓN ENTRE COLUMNAS (si usás Bootstrap 5) */
+.row.gx-5 {
+  --bs-gutter-x: 5rem !important; /* Separación horizontal más grande */
+}
+
+/* INTERLINEADO EN TÍTULOS Y TEXTOS */
+.valores-title {
+  line-height: 1.15;   /* Título principal */
+}
+.valores-subtitulo {
+  line-height: 1.3;    /* Subtítulo h4 */
+}
+.valores-desc {
+  line-height: 1.5;    /* Párrafo descriptivo */
+  margin-top: 16px;    /* Aire arriba */
+  margin-bottom: 0;    /* No agregues margen extra abajo */
+}
+
+/* OPCIONAL: más aire abajo de cada bloque de valor */
+.valores-section .col-md-4 {
+  margin-bottom: 32px; /* Aire abajo en mobile o tablet */
+}
+.footer-f1 {
+  background: #5089D3;
+  color: #fff;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+.footer-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.footer-links li a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  transition: color 0.2s;
+}
+.footer-links li a:hover {
+  color: #fff;
+}
+.footer-links-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 150px;
+  flex: 1 1 0; /* Distribución pareja entre columnas */
+}
+.footer-menus {
+  width: 100%;
+}
+.footer-social {
+  display: flex;
+  gap: 18px;
+  margin-top: 8px;
+}
+.footer-social-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  border: 1.5px solid #fff;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.footer-social-link:hover {
+  background: #fff;
+  color: #5089D3;
+  border-color: #fff;
+}
+.footer-line {
+  border-color: rgba(255,255,255,0.25);
+  opacity: 1;
+}
+.footer-copy {
+  font-size: 15px;
+  opacity: 0.92;
+}
+
+@media (max-width: 991.98px) {
+  .footer-menus {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 32px !important;
+  }
+  .footer-links-column {
+    align-items: flex-start !important;
+    text-align: left !important;
+    width: 100%;
+    min-width: 0;
+  }
+  .footer-social {
+    justify-content: flex-start !important;
+    margin-top: 18px;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer-f1 .container-xxl {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+  .footer-social-link {
+    width: 34px; height: 34px; font-size: 18px;
+  }
+  .footer-title { font-size: 16px;}
+  .footer-links li a { font-size: 15px;}
+}
+/* --- HEREDÁ LOS ESTILOS DE TU SITIO --- */
+/* Ya deberías tener .volanta-custom y .h2-custom. Los estilos de abajo son SOLO para el form. */
+
+.newsletter-section {
+  background: #faf8ee;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* FORMULARIO: sin padding, sin gap, sin margen interno a la derecha */
+.newsletter-form-custom {
+  display: flex;
+  max-width: 1060px;       /* Ancho máximo de la barra */
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  background: #e8ecef;
+  border-radius: 46px;
+  padding: 0;              /* SIN padding */
+  box-shadow: none;
+  height: 78px;            /* Alto total de la barra */
+  border: none;
+  overflow: hidden;        /* Para que el botón y el input se ajusten al borde */
+}
+
+/* INPUT: ocupa todo el espacio posible, sin margen derecho */
+.newsletter-input-custom {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1.35rem;
+  color: #5089D3;
+  padding: 0 0 0 36px;      /* Padding solo a la izquierda */
+  outline: none;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  height: 100%;
+}
+
+.newsletter-input-custom::placeholder {
+  color: #5089D3;
+  opacity: 0.8;
+  font-weight: 400;
+  font-size: 1.35rem;
+}
+
+/* BOTÓN: ancho fijo, sin margen, redondeado solo a la derecha */
+.newsletter-btn-custom {
+  border: none;
+  background: #FFD008;
+  color: #222;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 270px;               /* Ancho FIJO del botón, MODIFICÁ ESTE VALOR */
+  height: 100%;               /* Ocupar toda la altura del form */
+  border-radius: 0 46px 46px 0;
+  transition: background 0.2s;
+  cursor: pointer;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;                  /* Sin margen */
+  padding: 0;                 /* Padding innecesario, va width fijo */
+}
+
+.newsletter-btn-custom:hover,
+.newsletter-btn-custom:focus {
+  background: #ffe356;
+  color: #222;
+}
+
+@media (max-width: 991.98px) {
+  .newsletter-form-custom { height: 54px; padding: 0 4px 0 12px; max-width: 98vw;}
+  .newsletter-btn-custom { height: 36px; padding: 0 14px; font-size: 1rem;}
+  .newsletter-input-custom, .newsletter-input-custom::placeholder { font-size: 1rem;}
+}
+
+@media (max-width: 600px) {
+  .newsletter-form-custom {
+    flex-direction: column;
+    height: auto;
+    border-radius: 22px;
+    padding: 10px 4px;
+    gap: 8px;
+    width: 98vw;
+    max-width: none;
+  }
+  .newsletter-btn-custom {
+    width: 100%;
+    margin: 0;
+    border-radius: 22px;
+    height: 32px;
+    font-size: 20px;
+  }
+  .newsletter-input-custom, .newsletter-input-custom::placeholder { font-size: 0.95rem;}
+}
+.newsletter-section {
+  background: #F4F2EA;
+  background-size: cover;
+  background-position: center;
+  padding: 10;                 /* Saco el padding! */
+  min-height: 0;
+  height: 450px;              /* Alto fijo igual al Figma */
+  display: flex;
+  align-items: center;
+}
+.newsletter-section .container {
+  width: 100%;
+}
+/* VOLANTA Y TITULO UNIFICADOS */
+.volanta-quienes {
+  font-family: 'Raleway', Arial, sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #232323;
+  font-size: 1.08rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.h2-quienes {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 2.7rem;
+  color: #5089D3;
+  font-weight: 800;
+  line-height: 1.12;
+  margin-bottom: 0.8em;
+}
+@media (max-width: 768px) {
+  .h2-quienes { font-size: 2rem; }
+  .volanta-quienes { font-size: 1rem; }
+}
+
+/* CONTENEDOR SECCION */
+.contacto-section {
+  background: #F4F2EA !important; /* color del fondo del form */
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* FOTO */
+.img-contacto {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 991px) {
+  .img-contacto {
+    max-width: 700px;
+    margin: 0 auto px auto;
+  }
+}
+@media (max-width: 600px) {
+  .img-contacto {
+    max-width: 220px;
+    margin: 0 auto 18px auto;
+  }
+}
+
+/* FORMULARIO */
+.contacto-form {
+  width: 100%;
+}
+.form-control-custom {
+  border: 2px solid #5089D3;
+  border-radius: 12px;
+  font-size: 1.22rem;
+  padding: 20px 18px;
+  color: #5089D3;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  background: #f4f2ea
+  margin-bottom: 0;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+.form-control-custom::placeholder {
+  color: #5089D3;
+  opacity: 0.72;
+}
+.form-control-custom:focus {
+  border-color: #FFD008;
+  outline: none;
+  box-shadow: none;
+}
+
+/* BOTÓN IGUAL AL NEWSLETTER */
+.newsletter-btn-custom {
+  border: none;
+  background: #FFD008;
+  color: #222;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0 0; /* Padding no hace falta por w-100 */
+  border-radius: 999px;
+  height: 68px;
+  margin-left: 0;
+  margin-top: 8px;
+  transition: background 0.2s;
+  cursor: pointer;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.newsletter-btn-custom:hover,
+.newsletter-btn-custom:focus {
+  background: #ffe356;
+  color: #222;
+}
+
+/* Responsive: stack imagen y form en mobile */
+@media (max-width: 991px) {
+  .contacto-section .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacto-section .col-lg-5,
+  .contacto-section .col-lg-7 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .contacto-section .col-lg-5 {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* --- TEAM: ESTILOS --- */
+.bg-team {
+  background: #faf8ee !important;   /* Sin imagen de fondo */
+}
+
+/* Volanta igual a "quienes somos" */
+.volanta-team {
+  font-size: 1.1rem;
+  letter-spacing: 0.19em;
+  color: #30302E;
+  text-transform: uppercase;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-bottom: 0.2em;
+  display: block;
+}
+
+/* Título H2 */
+.h2-team {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 2.7rem;         /* 43.2px */
+  font-weight: 700;
+  color: #5089D3;
+  line-height: 1.1;
+  margin-bottom: 1.8rem;
+}
+
+/* Nombre del integrante */
+.nombre-equipo {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 2.58rem;        /* 41.33px */
+  font-weight: 700;
+  color: #5089D3;
+  margin-bottom: 0.6em;
+  line-height: 1.1;
+}
+
+/* Descripción del integrante */
+.desc-equipo {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 1.36rem;        /* 21.77px */
+  color: #30302E;
+  font-weight: 400;
+  margin-bottom: 0;
+  opacity: 1;
+  line-height: 1.35;
+}
+
+/* Responsive para mobile */
+@media (max-width: 767px) {
+  .h2-team {
+    font-size: 2rem;
+  }
+  .nombre-equipo {
+    font-size: 1.5rem;
+  }
+  .desc-equipo {
+    font-size: 1rem;
+  }
+  .equipo-row {
+    margin-top: 1.5rem !important;
+  }
+}
+.h2-team::after,
+.h2-custom::after {
+  display: none !important;
+  content: none !important;
+}
+.bodegas-section {
+  background-color: #5089D3; /* fallback por si no carga el fondo */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  width: 100%;
+}
+
+.bodegas-section .volanta-custom {
+  color: #fff;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.bodegas-section .h2-custom {
+  color: #fff;
+  font-size: 2.7rem;
+  font-weight: 700;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+.bodegas-logos-gif {
+  max-width: 90vw;
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  /* agregale margin-bottom si necesitás */
+}
+
+@media (max-width: 768px) {
+  .bodegas-section .h2-custom {
+    font-size: 2rem;
+  }
+  .bodegas-logos-gif {
+    max-width: 100vw;
+    margin-top: 1rem;
+  }
+  .bodegas-section {
+    min-height: 300px;
+  }
+}
+/* Fondo de galería */
+.galeria-bg {
+  background-image: url('IMAGENES/fondo-galeria.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+/* Volanta y título con el estilo de quienes somos */
+.volanta-quienes {
+  color: #65625b;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.h2-quienes {
+  color: #5089D3;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .h2-quienes {
+    font-size: 2rem;
+  }
+}
+
+/* Estilo para las imágenes: SIN fondo blanco, sólo borde redondeado */
+.img-galeria {
+  border-radius: none;
+  box-shadow: 0 6px 30px 0 rgba(0,0,0,0.06);
+  background: transparent !important;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* Si querés, podés agregar hover para que crezcan */
+  transition: transform 0.18s;
+}
+.img-galeria:hover {
+  transform: scale(1.03);
+}
+
+/* Borra cualquier clase previa que meta fondo blanco */
+.img-rounded,
+.rounded,
+.bg-white {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+/* --- Volanta y título igual a "quienes somos" --- */
+.volanta-quienes {
+  color: #65625b;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.h2-quienes {
+  color: #5089D3;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  text-align: center;
+  position: relative;
+}
+
+/* Eliminamos la línea celeste */
+.h2-quienes::after { display: none !important; }
+
+@media (max-width: 768px) {
+  .h2-quienes { font-size: 2rem; }
+}
+
+/* --- Estructura de columnas --- */
+.maridaje-card {
+  background: none;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 42px;                  /* Más separación como en Figma */
+  width: 100%;
+  box-shadow: none;
+}
+
+.maridaje-img {
+  width: 520px;               /* Más chico, para que no "empaste" en desktop */
+  max-width: 35vw;
+  min-width: 280px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  margin-right: 0;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.maridaje-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 0;
+  width: 100%;
+  gap: 12px;
+}
+
+/* Volanta secundaria */
+.volanta-maridaje-sec {
+  color: #30302E;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  opacity: 0.78;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+/* Titulo h3 de columna */
+.h3-maridaje {
+  color: #5089D3;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.section-maridaje-fichas {
+  background: #faf8ee;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.maridaje-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.maridaje-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 0;
+  gap: 22px;
+}
+
+.volanta-maridaje-sec {
+  color: #30302E;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.13em;
+  opacity: 0.80;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.h3-maridaje {
+  color: #5089D3;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 600px
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+  line-height: 1.15;
+  margin-bottom: 0;
+  max-width: 360px;
+}
+
+/* Botón redondo SOLO para esta sección */
+.btn-maridaje-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFD008;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  margin-left: 18px;
+  text-decoration: none;
+  transition: background 0.16s, color 0.16s;
+  box-shadow: 0 2px 10px 0 rgba(80,137,211,0.07);
+}
+
+.btn-maridaje-card:hover,
+.btn-maridaje-card:focus {
+  background: #ffe356;
+  color: #222;
+}
+.btn-maridaje-card i {
+  font-size: 2rem;
+  transition: transform 0.18s;
+}
+.btn-maridaje-card:hover i { transform: translateX(3px); }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .maridaje-img { max-width: 98vw; }
+  .maridaje-bottom-row { flex-direction: column; align-items: flex-start; width: 100%; gap: 10px; }
+  .h3-maridaje { font-size: 1.2rem; max-width: 100%; }
+  .btn-maridaje-card { width: 48px; height: 48px; font-size: 1.4rem; align-self: flex-end; }
+}
+
+/* Volanta a la izquierda, igual estilo */
+.volanta-lateral {
+  color: #30302ES;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 20PX;
+  font-weight: 400;
+  letter-spacing: 8PX;
+  text-transform: uppercase;
+  opacity: 0.85;
+  text-align: left;
+  display: block;
+  margin-bottom: 50px;
+}
+
+/* Título h2 alineado a la izquierda */
+.h2-lateral {
+  color: #5089D3;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 1.7rem;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  text-align: left;
+  position: relative;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .h2-lateral { font-size: 35px; }
+}
+
+/* Párrafo más grande */
+.parrafo-lateral {
+  color: #30302E;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 20px;     /* Subí el tamaño, tocá acá si querés más */
+  font-weight: 400;
+  line-height: 38px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.parrafo-lateral strong {
+  font-weight: 550;                  /* En vez de 700 (bold) */
+  color: #30302E;                    /* O el color principal, para que no sea solo negro */
+  letter-spacing: 0.01em;
+}
+@media (max-width: 768px) {
+  .parrafo-lateral { font-size: 19px; }
+}
+/* Eliminar línea azul de títulos laterales */
+.h2-lateral,
+.h2-lateral::after {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  content: none !important;
+  display: block;
+}
+.section-bg-full {
+  width: 100vw;
+  min-width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  /* Para evitar que la barra de scroll aparezca */
+  z-index: 1;
+}
+/* Tamaño imágenes sección valores */
+.valores-section .valores-icon img {
+  max-width: 800px !important;   /* Cambiá este valor por el tamaño que quieras (ej: 320px, 250px, etc) */
+  width: 100% !important;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive: achica aún más en mobile si querés */
+@media (max-width: 767px) {
+  .valores-section .valores-icon img {
+    max-width: 140px !important;
+  }
+}
+/* Fondo rectangular */
+.suscrip-box2-figma {
+  background: #F4F2E9;
+  border-radius: 32px;
+  max-width: 500px;
+  padding: 30px 30px 30px 30px;
+  margin: 0 auto;
+  box-shadow: 0 4px 16px 0 rgba(80,137,211,0.08);
+  border: none;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+/* Volanta: Raleway Regular, 20px, tracking 25% */
+.suscrip-volanta {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #30302E;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.88;
+  display: block;
+  margin-bottom: 14px;
+}
+
+/* Título: Raleway Bold, 40px */
+.suscrip-titulo {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #5089D3;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 0%;
+}
+
+/* Precio: Plus Jakarta Bold, 64px */
+.suscrip-precio-figma {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  color: #5089D3;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 0% 0;
+  letter-spacing: -1px
+}
+.suscrip-precio-figma span {
+  font-size: 28px;
+  font-weight: 400;
+  color: #5089D3;
+}
+
+/* Descripción breve */
+.suscrip-desc {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 21px;
+  color: #30302E;
+  margin: 0 0 5px 0;
+}
+
+/* ¿Qué incluye? */
+.suscrip-subt {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  color: #30302E;
+  margin-bottom: 18px;
+}
+
+/* Imagen */
+.suscrip-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.suscrip-img-wrapper img {
+  max-width: 430px;
+  border-radius: NONE;
+  box-shadow: none;
+}
+
+/* Lista */
+.suscrip-lista-figma {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 5px 0;
+}
+.suscrip-lista-figma li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 200;
+  color: #5089D3;
+  border-bottom: 1.5px solid #A7C6EE;
+  padding: 15px 0;
+}
+.suscrip-lista-figma li span:first-child {
+  color: #5089D3;
+  font-weight: 400;
+}
+.suscrip-lista-figma li.no-incluye span:first-child {
+  color: #878787;
+  font-weight: 400;
+}
+.suscrip-lista-figma li:last-child {
+  border-bottom: none;
+}
+
+/* Check en círculo */
+.circle-check {
+  width: 32px;
+  height: 32px;
+  background: #F4F2E9;
+  border: 2px solid #5089D3;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #5089D3;
+}
+.circle-cross {
+  color: #878787;
+  border-color: #878787;
+}
+
+.btn-box2 {
+  margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .suscrip-box2-figma {
+    max-width: 97vw;
+    padding: 16px 2vw 18px 2vw;
+  }
+  .suscrip-titulo { font-size: 29px; }
+  .suscrip-precio-figma { font-size: 32px; }
+  .suscrip-precio-figma span { font-size: 15px; }
+  .suscrip-lista-figma li { font-size: 17px; }
+}
+
+.btn-suscrip-custom {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  gap: 0px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center !important;
+  font-family: 'Plus Jakarta Sans', 'Raleway', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.btn-suscrip-custom .suscrip-text {
+  flex: 0 0 auto;
+}
+
+.btn-suscrip-custom .divider-vertical {
+  border-right: 2px solid #30302E;
+  height: 36px;
+  display: inline-block;
+}
+
+.btn-suscrip-custom i {
+  font-size: 2rem;
+  margin-left: 0;
+  vertical-align: middle;
+}
+
+@media (max-width: 575px) {
+  .btn-suscrip-custom {
+    flex-direction: column !important;
+    gap: 8px;
+    font-size: 1.3rem;
+  }
+  .btn-suscrip-custom .divider-vertical {
+    display: none !important;
+  }
+}
+.suscrip-card-corto {
+  min-height: 560px;   /* Ajustá el alto mínimo como en Figma */
+  /* Opcional: centrado vertical del contenido solo si te gusta */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.detalle-volanta {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #30302E;
+  font-size: 1.15rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  text-align: center;
+}
+.detalle-titulo {
+  color: #5089D3;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.detalle-titulo-item {
+  color: #5089D3;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.detalle-texto {
+  color: #30302E;
+  font-family: 'plus jakarta sans', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0 auto 0.5rem auto;
+  max-width: 340px;
+}
+@media (max-width: 991px) {
+  .detalle-titulo { font-size: 2rem; }
+  .detalle-titulo-item { font-size: 28px; }
+  .detalle-texto { font-size: 18px; }
+}
+@media (max-width: 768px) {
+  .detalle-titulo { font-size: 1.3rem; }
+  .detalle-titulo-item { font-size: 20px; }
+  .detalle-beneficios-section { padding-top: 36px; padding-bottom: 36px; }
+}
+.detalle-beneficios-section .detalle-titulo,
+.detalle-beneficios-section h2,
+.detalle-beneficios-section .container,
+.detalle-beneficios-section {
+  border-bottom: none !important;
+  box-shadow: none !important;
+
+  .img-beneficio {
+  max-width: 200px;   /* Cambiá esto al tamaño que más te guste */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* === PASOS – Estilos exclusivos para pantalla de detalle === */
+
+.detalle-pasos .paso-card-custom {
+  background: #5089d3 !important;           /* Fondo azul “uva” */
+  border-radius: 22px !important;
+  color: #fff !important;
+  min-height: 100px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  box-shadow: none;
+  border: none;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  position: relative;
+  /* OPCIONAL: si querés una imagen de fondo tipo “estampilla”
+  background: url('IMAGENES/tarjeta-fondo.png') center/cover no-repeat, #5089d3 !important;
+  */
+}
+
+.detalle-pasos .paso-numero-custom {
+  background: #ffd600 !important;           /* Amarillo fuerte */
+  color: #5089d3 !important;                /* Azul para el número */
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: 18px;
+  box-shadow: none;
+}
+
+.detalle-pasos .paso-texto-custom {
+  color: #fff !important;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .detalle-pasos .paso-card-custom {
+    padding: 12px 10px;
+    min-height: 80px;
+  }
+  .detalle-pasos .paso-numero-custom {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+    margin-right: 10px;
+  }
+  .detalle-pasos .paso-texto-custom {
+    font-size: 1.1rem;
+  }
+}
+/* ESTILOS SOLO PARA PASOS DE DETALLE */
+.detalle-pasos .paso-card-custom {
+  background: #5089D3;
+  border-radius: 24px;
+  box-shadow: 0 2px 16px 0 rgba(80,137,211,0.09);
+  min-height: 90px;
+  margin-bottom: 12px;
+  padding: 24px 24px 24px 0px;
+  display: flex;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+.detalle-pasos .paso-numero-custom {
+  background: #FFD400;
+  color: #5089D3;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px 0 rgba(80,137,211,0.05);
+}
+
+.detalle-pasos .paso-texto-custom {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .detalle-pasos .paso-card-custom {
+    padding: 14px 10px 14px 0;
+    min-height: 70px;
+  }
+  .detalle-pasos .paso-numero-custom {
+    font-size: 1.2rem;
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+  }
+  .detalle-pasos .paso-texto-custom {
+    font-size: 1rem;
+  }
+}
+/* Importar Plus Jakarta Sans desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+.faq-real .accordion-item {
+  border: none;
+  background: transparent;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* PREGUNTA */
+.faq-real .accordion-button {
+  color: #5089D3;
+  background: #FAFAF7;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  border: 2px solid #5089D3;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+  padding: 1.3rem 2rem;
+  transition: background .18s, color .18s, border .18s;
+  outline: none;
+}
+
+/* Pregunta abierta */
+.faq-real .accordion-button:not(.collapsed) {
+  color: #fff;
+  background: #5089D3;
+  border-color: #5089D3;
+  font-weight: 700;
+}
+
+/* Flechita default y abierta (azul, blanca) */
+.faq-real .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%235089d3' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 1 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+  filter: none;
+}
+
+.faq-real .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 1 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+/* Elimina sombra focus Bootstrap */
+.faq-real .accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: #5089D3 !important;
+}
+
+/* RESPUESTA */
+.faq-real .accordion-body {
+  background: #5089D3;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  border-radius: 0 0 18px 18px;
+  padding: 1.3rem 2rem;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .faq-real .accordion-button,
+  .faq-real .accordion-body {
+    padding: 1rem 1.1rem;
+    font-size: 1rem;
+  }
+}
+.suscrip-card-corto.position-relative {
+  overflow: visible !important;
+}
+
+/* CINTA RECOMENDADO */
+.cinta-recomendado {
+  position: absolute !important;
+  top: 24px !important;
+  right: -54px !important;
+  background: #5089D3 !important;
+  color: #fff !important;
+  font-size: 19px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 600 !important;
+  padding: 10px 60px !important;
+  transform: rotate(45deg) !important;
+  z-index: 10 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  box-shadow: 0 2px 12px rgba(80, 137, 211, 0.10) !important;
+  letter-spacing: 2px !important;
+  min-width: 200px !important;
+  border: 4px solid #fff !important;
+}
+
+.barrita-recomendado {
+  width: 44px !important;
+  height: 3.5px !important;
+  background: #fff !important;
+  margin-bottom: 7px !important;
+  border-radius: 4px !important;
+  display: block !important;
+}
+
+.texto-recomendado {
+  letter-spacing: 2px !important;
+  font-size: 17px !important;
+}
+/* Todas las imágenes .img-beneficio tienen el mismo tamaño y quedan centradas */
+.img-beneficio {
+  width: 300px;        /* Ajustá el tamaño según prefieras */
+  height: 300px;
+  object-fit: contain; /* No deforma ni corta, siempre se ve bien */
+  margin-bottom: 18px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive: más chicas en mobile */
+@media (max-width: 700px) {
+  .img-beneficio {
+    width: 400px;
+    height: 400px;
+  }
+}

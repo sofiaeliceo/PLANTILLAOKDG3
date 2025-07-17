@@ -504,7 +504,7 @@ h1, h2, h3, h4, h5, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 400;
   font-size: 21px;
-  color: #30302E;
+  color: #2e2e30;
   line-height: 1.37;           /* 37% de interlineado */
   letter-spacing: 0em;         /* Si el figma pide más, subilo */
   margin-bottom: 36px;
@@ -591,15 +591,16 @@ h1, h2, h3, h4, h5, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
 /* Fondo y línea superior */
 .navbar-custom {
   background: #F4F2EA !important;
-  border-top: 0px solid #0000;  /* O el color que uses para esa "linea" sutil */
+  border-top: 0px solid #0000;
+  border-bottom: 2px solid #222  /* O el color que uses para esa "linea" sutil */
   box-shadow: none;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 22px;
 }
 
 /* Logo */
 .navbar-logo {
-  max-height: 30px;    /* Ajustalo según tu PNG */
+  max-height: 26px;    /* Ajustalo según tu PNG */
   width: auto;
   margin-right: 8px;
 }
@@ -608,7 +609,7 @@ h1, h2, h3, h4, h5, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
 .navbar-nav .nav-link {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 17px;
   color: #30302E;
   margin-left: 20px;
   margin-right: 0;
@@ -710,7 +711,7 @@ h1, h2, h3, h4, h5, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
   font-family: 'Raleway', sans-serif;
   font-size: 115px;
   font-weight: 700;
-  color: #5089D3;
+  color: #5089D3
   letter-spacing: -0.017em; /* -1.7% */
   line-height: 100px; /* Menos interlinea */
   margin-bottom: 30px; /* 30px de separación abajo */
@@ -859,7 +860,7 @@ h1, h2, h3, h4, h5, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
   color: #5089D3;
   letter-spacing: -1px;
   line-height: 1.1;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   position: relative;
 }
 
@@ -1073,7 +1074,7 @@ h1, h2, h3, h4, h5, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
   .valores-volanta { font-size: 13px; }
 }
 .paso-card-custom {
-  background-image: url('IMAGENES/cartel\ 4.svg');
+  background-image: url('IMAGENES/cartel.png');
   background-size: cover;
   background-position: center;
   width: 90%;
@@ -1082,8 +1083,8 @@ h1, h2, h3, h4, h5, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
   align-items: center;
   justify-content: flex-start;
   gap: 1px;
-  padding: 10px 32px;
-  margin-bottom: 10px;
+  padding: 10px 50px;
+  margin-bottom: 28px;
 }
 
 .paso-numero-custom {
@@ -1120,20 +1121,35 @@ h1, h2, h3, h4, h5, .h1-custom, .h2-custom, .h3-custom, .h4-custom {
   font-family: 'Plus Jakarta Sans', 'Raleway', Arial, sans-serif;
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: 0.23em;
+  letter-spacing: 10px;
   color: #30302E;
   text-transform: uppercase;
-  opacity: 0.84;
+  opacity: 100;
   margin-bottom: 22px;
   display: block;
+
+}@media (max-width: 768px) {
+  .volanta-custom {
+    font-size: 19px;
+    letter-spacing: 5px;
+    margin-bottom: 16px;
+  }
 }
+
+@media (max-width: 480px) {
+  .volanta-custom {
+    font-size: 18px;
+    letter-spacing: px;
+  }
+}
+
 .h2-custom {
   font-family: 'Raleway', Arial, sans-serif;
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 700;
   color: #5089D3;
-  margin-bottom: 12px;
-  letter-spacing: -0.01em;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
   position: static;
 }
 .h2-custom::after {
@@ -3245,4 +3261,2724 @@ object-fit: cover;
     width: 400px;
     height: 400px;
   }
+}
+}
+@media (max-width: 767px) {
+  .hero-img-col img {
+    width: 90vw;           /* Hace que la imagen ocupe casi todo el ancho de la pantalla */
+    max-width: 350px;      /* Ajustá este valor según el tamaño real que querés */
+    margin: 24px auto 0;   /* Centrado y con margen arriba */
+    display: block;        /* Por si necesitás forzar el centrado */
+  }
+  .hero-img-col {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 100px;
+    line-height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 110px;
+    line-height:95px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 70px;
+    line-height: 65px;
+  }
+}
+@media (max-width: 430px) {
+  .hero-title {
+    font-size: 60px;
+    line-height: 65px;
+  }
+}
+@media (max-width: 390px) {
+  .hero-title {
+    font-size: 53px;
+    line-height: 55px;
+  }
+}
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 49px;
+    line-height: 55px;
+  }
+}
+@media (max-width: 992px) {
+  .hero-lead {
+    font-size: 19px;
+    line-height: 33px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-lead {
+    font-size: 20px;
+    line-height: 33px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-lead {
+    font-size: 19px;
+    line-height: 30px;
+  }
+}
+.hero-img {
+  max-width: 420px;
+  width: 100%;
+  /* height: auto;  <-- Bootstrap ya lo hace */
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .hero-img {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img {
+    max-width: 500px;
+  }
+}
+@media (max-width: 430px) {
+  .hero-img {
+    max-width: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .btns-stack {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .btn-pill-yellow,
+  .btn-pill-outline-blue {
+    width: 100%;
+    justify-content: center;
+    font-size: 20px;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-pill-yellow,
+  .btn-pill-outline-blue {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+}
+/* Reseteá los márgenes propios de cada uno */
+.volanta-custom {
+  margin-bottom: 30px; /* Ajustá según gusto */
+  display: block;
+}
+
+.hero-title {
+  margin-bottom: 30px;
+}
+
+.hero-lead {
+  margin-bottom: 30px;
+}
+
+.btns-stack {
+  margin-bottom: 30px; /* Si querés igual espacio abajo de los botones también */
+}
+
+/* Opcional, si la imagen está debajo en mobile */
+.hero-img {
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .volanta-custom,
+  .hero-title,
+  .hero-lead,
+  .btns-stack,
+  .hero-img {
+    margin-bottom: 20px;
+    margin-top: 0; /* Por las dudas */
+  }
+  .hero-img {
+    margin-top: 20px;
+  }
+}.hero-img {
+  max-width: 700px; /* Ajustá a gusto: 600, 700, 800px... */
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .hero-img {
+    max-width: 480px;
+  }
+}
+@media (max-width: 992px) {
+  .hero-img {
+    max-width: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-img {
+    max-width: 700px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-img {
+    max-width: 400px;
+  }
+}
+
+.lead-small {
+  font-family: 'Plus Jakarta Sans', 'Raleway', Arial, sans-serif;
+  font-size: 20px;         /* Tamaño más chico que el hero */
+  font-weight: 400;        /* Regular, podés poner 500 si te gusta más negrita */
+  color: #30302E;          /* Mismo color elegante de tu web */
+  line-height: 37px;        /* Buen interlineado para leer fácil */
+  letter-spacing: 0em;     /* Ajustá si querés más espacio entre letras */
+  margin-bottom: 28px;     /* Separación abajo para que respire */
+  max-width: 700px;        /* Opcional, así no se va muy ancho */
+}
+
+@media (max-width: 768px) {
+  .lead-small {
+    font-size: 18px;
+    line-height: 37px;
+    margin-bottom: 28px;
+  }
+}
+.quienes-bg {
+  background-image: url('IMAGENES/fondo-quienes-somos.jpg');  /* Cambiá por tu fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 850px;
+  min-height: 500px;   /* Ajustá a gusto */
+  width: 100%;
+}
+
+/* Responsive para mobile */
+@media (max-width: 768px) {
+  .quienes-bg {
+    min-height: 200px;
+    background-position: center top;
+    /* Si querés, usá otra imagen para mobile: */
+    /* background-image: url('IMAGENES/fondo-seccion-mobile.jpg'); */
+  }
+}
+@media (max-width: 393px) {
+  .quienes-bg {
+    min-height: 600px;
+    background-position: center top;
+    /* Si querés, usá otra imagen para mobile: */
+    /* background-image: url('IMAGENES/fondo-seccion-mobile.jpg'); */
+  }
+}/* Fondo color para toda la sección valores */
+.valores-section {
+  background-color: #222;    /* Cambialo si querés otro fondo, pero este hace que #F4F2EA resalte */
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Volanta y título, mismo tamaño que quienes somos, color claro */
+.valores-volanta,
+.valores-title {
+  color: #F4F2EA !important;
+  text-align: center;
+}
+
+/* Subtítulo de los beneficios */
+.valores-subtitulo {
+  color: #F4F2EA;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* Texto de los beneficios */
+.valores-desc {
+  color: #F4F2EA;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Imagenes de los valores, más grandes solo acá */
+.valores-img {
+  max-width: 200px;   /* Ajustá este valor a gusto, más grande que el default */
+  width: 100%;
+  margin-bottom: 28px;
+  margin-top: 30px;
+}
+
+/* Responsive para mobile */
+@media (max-width: 768px) {
+  .valores-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .valores-subtitulo {
+    font-size: 35px;
+  }
+  .valores-desc {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .valores-img {
+    max-width: 150px;
+  }
+}
+@media (max-width: 390px) {
+  .valores-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .valores-subtitulo {
+    font-size: 35px;
+    margin-bottom: 40px !important;  /* Sumale este valor (ajustalo a tu gusto) */
+  }
+  .valores-desc {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .valores-img {
+    max-width: 200px;
+  }
+}
+.h2-custom {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 393px) {
+  .h2-custom {
+    font-size: 38px;
+  }
+}
+
+/* SOLO color para el de valores */
+.valores-title {
+  color: #F4F2EA !important;
+}
+
+.container {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 992px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.paso-card-custom {
+  background-image: url('IMAGENES/cartel.png');
+  background-size: contain;          /* Cambiado de cover a contain */
+  background-position: center;
+  background-repeat: no-repeat;      /* Asegura que no se repita */
+  width: 100%;                      /* Usá 100% para aprovechar el espacio de la columna */
+  min-height: 160px;                /* Más alto para ver más de la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1px;
+  padding: 10px 24px;
+  margin-bottom: 28px;
+}
+.pasos-group {
+  row-gap: 1px; /* o 0 */
+  column-gap: 0; /* así quedan pegadas al costado */
+}
+.pasos-group {
+  --bs-gutter-x: 30px;
+  --bs-gutter-y: 1px;
+}
+.pasos-group > [class^="col-"] {
+  padding-left: 0 !important;
+  padding-right: 20 !important;
+}
+.paso-card-custom {
+  background-image: url('IMAGENES/cartel.png');
+  background-size: contain;          /* O cover si preferís que se recorte */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1px;
+  padding: 28px 28px;
+  /* margin-bottom: 0;  Ya no hace falta si usás mb-2 o mb-1 en el HTML */
+}
+
+/* Número de paso */
+.paso-numero-custom {
+  background: #5089D3;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 18px;
+}
+
+.paso-texto-custom {
+  font-size: 19px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #30302E;
+  font-weight: 600;
+}
+
+/* Responsive: achicá paddings/tamaños si necesitás */
+@media (max-width: 992px) {
+  .paso-card-custom {
+    padding: 3px 1px;
+    min-height: 80px;
+  }
+  .paso-numero-custom {
+    font-size: 16px;
+    width: 34px;
+    height: 34px;
+  }
+  .paso-texto-custom {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .paso-card-custom {
+    padding: 10px 10px;
+    min-height: 80px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 393px) {
+  .paso-card-custom {
+    padding: 10px 6px;
+    min-height: 56px;       /* 56px es un mínimo cómodo, no queda tan chiquita */
+    font-size: 14px;        /* Bajá el font-size solo un poquito */
+  }
+  .paso-numero-custom {
+    font-size: 13px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .paso-texto-custom {
+    font-size: 14px;
+  }
+}
+/* --- Imagen de las cards de suscripción --- */
+.suscrip-img-card {
+  width: 600px;            /* Ajustá a gusto */
+  max-width: 100%;
+  height: auto;
+  border-radius: 18px;     /* Le da onda, pero diferente al hero */
+  margin-bottom: 10px;
+  object-fit: contain;     /* Mantiene la proporción siempre */
+  background: #fff;        /* Opcional: fondo blanco atrás */
+}
+
+/* Responsive imagen */
+@media (max-width: 767px) {
+  .suscrip-img-card {
+    width: 90px;
+    margin-bottom: 8px;
+  }
+}
+
+/* --- Cinta recomendado (Box 2) --- */
+.cinta-recomendado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px !important;
+  margin-top: 20px;
+}
+
+.texto-recomendado {
+  font-weight: bold;
+  color: #5089D3;        /* Celeste */
+  background: #eaf2fc;
+  padding: 5px 16px;
+  border-radius: 13px;
+  font-size: 16px;
+  letter-spacing: 6px;
+  box-shadow: 0 2px 8px 0 rgba(80,137,211,0.06);
+}
+
+/* --- Card de suscripción general --- */
+.suscrip-card-corto {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px 0 rgba(80,137,211,0.04);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.15s;
+  margin-bottom: 16px;
+  /* Espaciado general adentro de cada card */
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+/* --- Botón suscripción: mobile-friendly --- */
+.btn-suscrip-custom {
+  font-size: 19px;
+  padding: 12px 0;
+  border-radius: 999px;
+  margin-top: 18px;
+}
+
+/* Botón: mobile, que el icono pase abajo si no entra */
+@media (max-width: 576px) {
+  .btn-suscrip-custom {
+    flex-direction: column !important;
+    font-size: 17px;
+    gap: 7px;
+    padding: 10px 0;
+  }
+  .divider-vertical {
+    display: none !important;
+  }
+}
+
+/* --- Listado de items --- */
+.suscrip-lista-figma {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.suscrip-lista-figma li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.suscrip-lista-figma li.no-incluye {
+  opacity: 0.6;
+}
+
+.circle-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  color: #5089D3;
+  font-size: 1.2em;
+}
+
+.circle-cross {
+  background: #f7f7f7;
+  color: #C2C2C2;
+}
+
+/* --- Márgenes generales para los textos --- */
+.suscrip-volanta,
+.suscrip-titulo,
+.suscrip-precio-figma,
+.suscrip-desc,
+.suscrip-subt {
+  margin-bottom: 1px !important;
+}
+
+.suscrip-lista-figma {
+  margin-bottom: 0.8rem;
+}
+
+/* --- Headings --- */
+.suscrip-titulo {
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.suscrip-precio-figma {
+  font-size: 60px;
+  font-weight: 700;
+}
+.suscrip-desc {
+  color: #30302E;
+  font-size: 20px;
+}
+.suscrip-subt {
+  font-size: 20px;
+  color: #5089D3;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .suscrip-titulo {
+    font-size: 1.2rem;
+  }
+  .suscrip-precio-figma {
+    font-size: 1.15rem;
+  }
+}
+
+/* --- Responsive Cards: para que no se vayan tan anchas en mobile --- */
+@media (max-width: 576px) {
+  .suscrip-card-corto {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+  }
+  .suscrip-titulo {
+    font-size: 1.08rem;
+  }
+}
+.suscrip-img-card {
+  max-width: 380px !important;
+  width: 100%;
+  aspect-ratio: 422 / 313;
+  margin-top: 30px !important;
+  /* border-radius: 0;  <- así se asegura que NUNCA tenga esquinas redondeadas */
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  transition: transform 0.18s cubic-bezier(.6,.6,0,1.05);
+}
+
+.suscrip-img-card:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.suscrip-lista-figma {
+  list-style: none;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.suscrip-lista-figma li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #8ab4e6;   /* el color azul clarito */
+  padding: 15px 0 15px 0;             /* aire arriba y abajo */
+  font-size: 20px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  color: #5089D3;
+  margin-bottom: 2px;                 /* espacio entre líneas, tocá este valor a gusto */
+}
+
+.suscrip-lista-figma li:last-child {
+  border-bottom: none;                /* la última no lleva línea */
+}
+
+.suscrip-lista-figma .no-incluye {
+  color: #ffffff !important;             /* gris para los no incluidos */
+  font-weight: 400;
+}
+
+.circle-check {
+  border: 2px solid #5089D3;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #5089D3;
+  margin-left: 10px;
+}
+
+.circle-cross {
+  border-color: #bbb;
+  color: #bbb;
+}
+.suscrip-lista-figma {
+  width: 100%;
+  margin-left: 50px !important;   /* Usá el valor del padding de la card */
+  margin-right: 50px !important;
+}
+.suscrip-lista-figma li {
+  /* ...todo lo que tenías... */
+  padding: 15px 18px;  /* 15px arriba/abajo, 18px a los lados (ajustá a gusto) */
+}
+.suscrip-lista-figma li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #8ab4e6;
+  padding: 15px 0;            /* OJO: SOLO arriba y abajo */
+  font-size: 20px;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  color: #5089D3;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.suscrip-lista-figma li > span:first-child {
+  padding-left: 18px;         /* Aire a la izquierda del texto */
+}
+
+.circle-check {
+  margin-right: 18px;         /* Aire a la derecha del icono */
+}
+.btn-ajuste-card {
+  margin-top: 30px !important;  /* Ajustá este valor según necesites */
+}
+.suscrip-corta-ajuste {
+  min-height: 500px;    /* Ajustá el valor según lo que veas, podés probar con 480, 460, etc. */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.suscrip-corta-ajuste {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  min-height: 0 !important;
+  max-height: 1200px;   /* O el valor que te quede bien */
+  overflow: hidden;
+}
+.card-centrada {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* Mobile first: por defecto, las cards ocupan todo el ancho */
+.suscrip-card-corto {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto 24px auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 6px 28px 0 rgba(80,137,211,0.08);
+  transition: box-shadow .2s, transform .2s;
+  min-height: 0; /* Hace que la card no sea altísima en mobile */
+}
+
+/* Ajuste de altura SOLO para la card más corta (1 y 3) */
+.suscrip-corta-ajuste {
+  min-height: 0 !important;
+}
+
+/* Ajustes para imagen */
+.suscrip-img-card {
+  display: block;
+  margin: 0 auto;
+  max-width: 330px;
+  width: 100%;
+  aspect-ratio: 422 / 313;
+  object-fit: cover;
+  border-radius: 0 !important;  /* Sin bordes redondeados */
+  box-shadow: none !important;  /* Sin sombras raras */
+}
+
+/* Espaciado interno entre los textos */
+.suscrip-card-corto > * {
+  margin-bottom: 15px;
+}
+.suscrip-card-corto > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Centra el texto y las cards en mobile */
+@media (max-width: 991px) {
+  .suscrip-card-corto {
+    max-width: 600px;
+    padding: 18px 8px;
+    border-radius: 18px;
+  }
+  .suscrip-img-card {
+    max-width: 250px;
+  }
+}
+
+/* Que la columna ocupe todo el ancho en mobile */
+@media (max-width: 767px) {
+  .suscrip-card-corto {
+    max-width: 100%;
+    padding: 16px 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px 0 rgba(80,137,211,0.06);
+  }
+  .suscrip-img-card {
+    max-width: 210px;
+  }
+  .suscrip-titulo,
+  .suscrip-precio-figma,
+  .suscrip-desc,
+  .suscrip-subt {
+    text-align: center;
+    width: 100%;
+  }
+  .btn-suscrip-custom {
+    font-size: 20px;
+    padding: 14px 0 !important;
+    min-width: 100%;
+    border-radius: 30px;
+  }
+}
+
+/* Menos padding aún para mobile XS */
+@media (max-width: 767px) {
+  .suscrip-card-corto {
+    padding: 600px 0;
+    border-radius: 10px;
+  }
+  .suscrip-img-card {
+    max-width: 500px !important;
+  }
+}/* Ajustes en mobile: más chico para que no se desborde */
+@media (max-width: 767px) {
+  .suscrip-volanta {
+    font-size: 20px;    /* 16px */
+  }
+  .suscrip-titulo {
+    font-size: 40px; /* 22px */
+  }
+  .suscrip-precio-figma {
+    font-size: 60px;    /* 32px */
+  }
+  .suscrip-desc {
+    font-size: 20px;    /* 16px */
+  }
+  .suscrip-subt {
+    font-size: 20px; /* 15px */
+  }
+}
+@media (max-width: 767px) {
+  .suscrip-card-corto {
+    min-height: 1300px !important;  /* Ajustá el valor según lo que te guste, 400–440px suele andar bien */
+  }
+}
+
+/* Que la columna ocupe todo el ancho en mobile */
+@media (max-width: 393px) {
+  .suscrip-card-corto {
+    max-width: 100%;
+    padding: 16px 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px 0 rgba(80,137,211,0.06);
+  }
+  .suscrip-img-card {
+    max-width: 210px;
+  }
+  .suscrip-titulo,
+  .suscrip-precio-figma,
+  .suscrip-desc,
+  .suscrip-subt {
+    text-align: center;
+    width: 100%;
+  }
+  .btn-suscrip-custom {
+    font-size: 20px;
+    padding: 14px 0 !important;
+    min-width: 100%;
+    border-radius: 30px;
+  }
+}
+
+/* Menos padding aún para mobile XS */
+@media (max-width: 393px) {
+  .suscrip-card-corto {
+    padding: 600px 0;
+    border-radius: 10px;
+  }
+  .suscrip-img-card {
+    max-width: 500px !important;
+  }
+}/* Ajustes en mobile: más chico para que no se desborde */
+@media (max-width: 393px) {
+  .suscrip-volanta {
+    font-size: 20px;    /* 16px */
+  }
+  .suscrip-titulo {
+    font-size: 40px; /* 22px */
+  }
+  .suscrip-precio-figma {
+    font-size: 55px;    /* 32px */
+  }
+  .suscrip-desc {
+    font-size: 20px;    /* 16px */
+  }
+  .suscrip-subt {
+    font-size: 20px; /* 15px */
+  }
+}
+@media (max-width: 393px) {
+  .suscrip-card-corto {
+    min-height: 1300px !important;  /* Ajustá el valor según lo que te guste, 400–440px suele andar bien */
+  }
+}
+.btn-suscrip-custom {
+  min-width: 100%;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 20px;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, color .2s;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  gap: 0.7em;
+}
+
+@media (max-width: 767px) {
+  .btn-suscrip-custom {
+    font-size: 20px;
+    padding: 16px 0;
+    border-radius: 38px;
+    width: 100%;
+    max-width: 98vw;
+    min-width: unset;
+    margin: 0 auto;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-suscrip-custom .divider-vertical {
+    display: none !important;  /* La línea vertical NO aparece en mobile */
+  }
+  .btn-suscrip-custom i {
+    font-size: 20px;
+    margin-left: 0;
+    margin-top: 0px;
+  }
+}
+.section-suscripciones-bg {
+  background-image: url('IMAGENES/fondo-suscripciones.png');
+  background-size: cover;       /* Que cubra toda la sección */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  min-height: 1661px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Responsive para mobile (menos padding y posición de imagen si querés) */
+@media (max-width: 767px) {
+  .section-suscripciones-bg {
+    background-size: cover;   /* No cambiar si la imagen es grande */
+    background-position: top center; /* Por si querés que arriba se vea más la textura */
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.section-suscripcion {
+  padding-top: 60px;  /* Ajustá el valor según lo que necesites */
+}
+/* Volanta igual a la home */
+.volanta-maridaje-sec {
+  font-family: 'Plus Jakarta Sans', 'Raleway', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  color: #30302E;
+  text-transform: uppercase;
+  opacity: 100;
+  margin-bottom: 22px;
+  display: block;
+}
+
+/* Titulo como h2-custom pero un toque más chico */
+.h2-maridaje {
+  font-size: 30px !;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-weight: 800;
+  color: #5089D3;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+/* Subtitulo debajo de cada imagen */
+.h3-maridaje {
+    font-family: 'Raleway', Arial, sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: #5089D3;
+  margin-bottom: 25px !important;
+  letter-spacing: -0.5px;
+  position: static;
+}
+
+/* Imagen con margen, bien aireada y tamaño controlable */
+.maridaje-img-wrapper {
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 18px;
+}
+
+.maridaje-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0px; /* Sacale si querés borde redondo */
+  box-shadow: none;
+}
+
+/* Fila de texto y botón */
+.maridaje-bottom-row {
+  margin-top: 10px;
+  padding: 0 8px;
+  min-height: 80px;
+}
+
+/* Botón redondo amarillo */
+.btn-maridaje-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffd100;
+  color: #232323;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: none;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  text-decoration: none;
+}
+.btn-maridaje-card:hover {
+  background: #ffdf32;
+  transform: scale(1.07) rotate(-3deg);
+  color: #232323;
+}
+
+/* Responsive: apiladas, todo full width, centrado */
+@media (max-width: 991px) {
+  .maridaje-img-wrapper {
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .h2-maridaje {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .h2-maridaje {
+    font-size: 1.18rem;
+    margin-bottom: 18px;
+  }
+  .maridaje-img-wrapper {
+    max-width: 100vw;
+    margin-bottom: 12px;
+  }
+  .maridaje-bottom-row {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 12px;
+    padding: 0;
+    min-height: unset;
+  }
+  .btn-maridaje-card {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    margin-top: 8px;
+  }
+  .h3-maridaje {
+    font-size: 1.05rem;
+  }
+}
+
+/* Aire para toda la sección */
+.section-maridaje-fichas {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+.maridaje-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: none;
+  background: transparent;
+  transition: transform 0.35s cubic-bezier(.15,.84,.44,1), box-shadow 0.18s;
+}
+
+/* Efecto zoom suave SOLO con zoom/rotación */
+.maridaje-img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.maridaje-bottom-row {
+  display: flex;
+  align-items: baseline; /* Alinea el botón con el texto grande */
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px; /* Ajustalo a gusto */
+}
+
+.btn-maridaje-card {
+  margin-top: 18px; /* Probá este valor y ajustá */
+}
+.h2-maridaje::after,
+.h2-quienes::after {
+  display: none !important;
+}
+.h2-maridaje {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;      /* Misma medida que h2-custom */
+  line-height: 1.15;
+  color: #5089D3;         /* El celeste que venís usando */
+  text-align: center;
+  margin-bottom: 2.5rem;  /* Ajustá el espacio abajo a gusto */
+}
+
+/* Si tenés h2-custom, fijate el font-size y adaptá igual */
+/* Solo afecta la volanta de maridaje */
+.volanta-maridaje {
+  font-family: 'Plus Jakarta Sans', 'Raleway', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  color: #30302E;
+  text-transform: uppercase;
+  opacity: 100;
+  margin-bottom: 22px;
+  display: block;
+}
+
+/* Solo afecta el título de maridaje */
+.h2-maridaje {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #5089D3;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+  position: static;
+}
+@media (max-width: 991px) {
+  .maridaje-img-wrapper {
+    max-width: 900px;
+    margin-bottom: 18px;
+  }
+  .h3-maridaje {
+    font-size: 35px;
+    text-align: center;
+  }
+  .volanta-maridaje-sec {
+    font-size: 20px;
+    text-align: center;
+  }
+  .maridaje-bottom-row {
+    flex-direction: column;
+    align-items: stretch !important;
+    text-align: center;
+    gap: 12px !important;
+    margin-bottom: 15px;
+  }
+  .btn-maridaje-card {
+    align-self: center;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+  .text-start {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .btn-maridaje-card {
+    width: 100px;       /* Más grande */
+    height: 100px;      /* Más grande */
+    font-size: 20px;   /* Ícono más grande */
+  }
+}
+@media (max-width: 767px) {
+  .maridaje-img-wrapper {
+    max-width: 900px;
+    margin-bottom: 18px;
+  }
+  .h3-maridaje {
+    font-size: 35px;
+    text-align: center;
+  }
+  .volanta-maridaje-sec {
+    font-size: 20px;
+    text-align: center;
+  }
+  .maridaje-bottom-row {
+    flex-direction: column;
+    align-items: stretch !important;
+    text-align: center;
+    gap: 12px !important;
+    margin-bottom: 15px;
+  }
+  .btn-maridaje-card {
+    align-self: center;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+  .text-start {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-maridaje-card {
+    width: 90px;       /* Más grande */
+    height: 90px;      /* Más grande */
+    font-size: 20px;   /* Ícono más grande */
+  }
+}
+@media (max-width: 393px) {
+  .maridaje-img-wrapper {
+    max-width: 1000px;
+    margin-bottom: 18px;
+  }
+  .h3-maridaje {
+    font-size: 35px;
+    text-align: center;
+  }
+  .volanta-maridaje-sec {
+    font-size: 20px;
+    text-align: center;
+  }
+  .maridaje-bottom-row {
+    flex-direction: column;
+    align-items: stretch !important;
+    text-align: center;
+    gap: 12px !important;
+    margin-bottom: 15px;
+  }
+  .btn-maridaje-card {
+    align-self: center;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+  .text-start {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 393px) {
+  .btn-maridaje-card {
+    width: 90px;       /* Más grande */
+    height: 90px;      /* Más grande */
+    font-size: 20px;   /* Ícono más grande */
+  }
+}
+.bg-maridaje-fichas {
+  background-image: url('IMAGENES/mardiaje-fondo.png');  /* Cambiá por tu fondo real */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1105px;
+
+  /* Opcional: agregá un color de backup o un overlay */
+  /* background-color: #f4f2ea; */
+  /* position: relative;   No es necesario salvo que quieras overlays */
+}
+.bodegas-section {
+  background-image: url('IMAGENES/fondobodegas.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 631px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Responsive: Si necesitás ajustar para mobile, podés usar esto */
+@media (max-width: 767px) {
+  .bodegas-section {
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;        /* O el alto que te guste en mobile */
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.bodegas-logos-gif {
+  display: block;
+  max-width: 80%;     /* O 100% si querés que llegue a los bordes */
+  height: auto;
+  margin: 0 auto;     /* Centrado */
+  margin-bottom: 32px; /* Aire abajo */
+}
+
+@media (max-width: 991px) {
+  .bodegas-logos-gif {
+    max-width: 92%;  /* Un poco más ancho en tablet/mobile */
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bodegas-logos-gif {
+    max-width: 1000px;
+    margin-bottom: 18px;
+  }
+}
+.galeria-bg {
+  background-image: url('IMAGENES/fonditogaleria.png'); /* Cambiá por tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1197px;
+
+}
+
+
+.valores-section {
+  background-image: url('IMAGENES/F1 - VALORES.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 850px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* Responsive: Ajustá para mobile si querés */
+@media (max-width: 767px) {
+  .valores-section {
+    background-size: cover;
+    background-position: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* min-height: 50vh;  // Tocá este valor si la ves muy chica en mobile */
+  }
+}
+.quienes-bg {
+  background-image: url('IMAGENES/fondo-quienes-somos.jpg'); /* Cambiá por el path a tu fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 850px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  /* Si la imagen se ve muy "alta", tocá el padding o agregá min-height */
+}
+
+/* Responsive para mobile */
+@media (max-width: 767px) {
+  .quienes-bg {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-size: cover;
+    background-position: center;
+    /* min-height: 50vh;  // Usá si necesitás que no se achique mucho */
+  }
+}
+.hero-section {
+  background-image: url('IMAGENES/FONDO1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  min-height: 1080px;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 393px) {
+  .hero-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: 1080px !important;
+  }
+}
+.section-bg-full.quienes-section {
+  background-image: url('IMAGENES/fondo-asi-funciona.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 850px;        /* Tocá este valor según la altura que quieras */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+  .section-bg-full.quienes-section {
+    min-height: 50vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-bg-full.quienes-section {
+    min-height: 40vh;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+/* Fondo del team, centrado y padding si querés */
+.team-section {
+  background: #F4F2EA;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Imagen igual que la tuya, podés customizar */
+.team-img-bg {
+  background: url('IMAGENES/bg-sello-team.png') center/cover no-repeat;
+  padding: 20px;
+  border-radius: 0; /* Sin borde redondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-img-bg img {
+  max-width: 260px; /* O el ancho que prefieras */
+  height: auto;
+  display: block;
+}
+
+/* Nombre celeste, grande y centrado */
+.team-nombre-custom {
+  font-size: 35px;        /* Igual que .valores-subtitulo */
+  color: #5089D3;           /* Celeste Yavino */
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Descripción negro, centrado, y parte en negrita */
+.team-desc-custom {
+  font-size: 18px;         /* Igual que .valores-desc */
+  color: #30302E;               /* Negro */
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+}
+.team-desc-custom b {
+  font-weight: bold;
+}
+
+/* Responsive ajuste para móvil */
+@media (max-width: 767px) {
+  .team-nombre-custom { font-size: 35px; }
+  .team-desc-custom  { font-size: 19px }
+  .team-img-bg img { max-width: 160px; }
+  .team-section { padding-top: 32px; padding-bottom: 32px; }
+}
+.team-section .row.justify-content-center {
+  gap: 40px 40px; /* 40px de espacio vertical entre filas */
+}
+
+.team-section .col-6,
+.team-section .col-md-4,
+.team-section .col-lg-3 {
+  margin-bottom: 48px !important; /* Más espacio abajo de cada integrante */
+}
+.team-bg {
+  background-image: url('IMAGENES/fondoliso.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 850px;
+}
+@media (max-width: 991px) {
+  .footer-menus {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    margin-top: 32px;
+  }
+  .footer-links-column {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  .footer-copy {
+    text-align: center !important;
+    margin-bottom: 14px;
+  }
+  .footer-social {
+    justify-content: center !important;
+    width: 100%;
+  }
+}
+
+@media (max-width: 393px) {
+  .footer-f1 {
+    font-size: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .footer-grape {
+    width: 44px;
+    margin-bottom: 1rem;
+  }
+  .footer-menus {
+    gap: 1.5rem;
+    margin-top: 20px;
+  }
+  .footer-title {
+    font-size: 20px;
+  }
+}
+.contacto-section {
+  background-image: url('IMAGENES/formfondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+/* Contenedor general de la barra */
+.newsletter-form-custom {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #DCE6F3; /* azul super claro */
+  border-radius: 72px;
+  padding: 10px 10px 10px 10px;
+  align-items: center;
+  box-shadow: none;
+  gap: 0;
+}
+
+/* Input grande, sin borde, alineado al centro, texto azul */
+.newsletter-input-custom {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  padding: 50px !important;
+  color: #5b97de;
+  border-radius: 60px;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+/* Botón amarillo bien redondeado y grande */
+.newsletter-btn-custom {
+  background: #ffd200;
+  color: #30302E;
+  font-size: 20px;
+  padding: 40px 90px;
+  border: none;
+  border-radius: 1000px;
+  font-weight: 500;
+  margin-left: -40px;  /* Esto solapa el botón sobre el input *//
+  margin-bottom: 10px;
+  z-index: 2;
+  box-shadow: none;
+  transition: background .15s;
+}
+
+.newsletter-btn-custom:hover {
+  background: #E6C202;
+}
+
+/* Responsive: achica la barra y fuente en mobile */
+@media (max-width: 991px) {
+  .newsletter-form-custom {
+    max-width: 100%;
+    padding-left: 1rem;
+    border-radius: 38px;
+  }
+  .newsletter-input-custom, .newsletter-btn-custom {
+    font-size: 1.25rem;
+    padding: 0.8rem 1rem;
+    border-radius: 36px;
+  }
+  .newsletter-btn-custom {
+    margin-left: -32px;
+    padding: 0.8rem 2rem;
+  }
+}
+.newsletter-section {
+  background-image: url('IMAGENES/FONDNEWSLETTER.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 451px;
+  /* Si querés que el fondo ocupe el alto justo de la sección, podés jugar con: */
+  /* min-height: 350px; (o el alto que veas bien) */
+  /* padding-top/bottom si te hace falta */
+}
+.contacto-section {
+  background-image: url('IMAGENES/fondoliso.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 962px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.contacto-section {
+  background-image: url('IMAGENES/formfondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+}
+.hero-detalle {
+  background-image: url('IMAGENES/fono-detalle-1.png');  /* Cambiá por el fondo que quieras */
+  background-size: cover;
+  background-position: center;
+  min-height: 1080px;
+}
+.valores-detalle-bg {
+  background-image: url('IMAGENES/fondo-que-incluye.png'); /* Cambiá la ruta por la que quieras */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1500px;
+}
+/* Fondo personalizado para la sección de valores en detalle */
+.valores-detalle-bg {
+  background-image: url('IMAGENES/fonditoq\ inclue.png'); /* Cambiá la ruta si hace falta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 1500px;
+}
+
+/* Ajuste para las imágenes dentro de la sección de detalle */
+.valores-detalle-bg .valores-img {
+  max-width: 270px;      /* Cambia este valor para agrandar/achicar */
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* Así siempre son cuadradas, cambiá si querés otro formato */
+  object-fit: contain;
+  margin-bottom: 24px;
+  transition: transform .22s cubic-bezier(.61,1,.88,1);
+  border-radius: 22px;
+}
+
+/* Animación suave al hacer hover (sin sombra ni fondo) */
+.valores-detalle-bg .valores-img:hover {
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: none;
+  background: none;
+}
+
+/* Subtítulo celeste solo en esta sección */
+.valores-detalle-bg .valores-subtitulo {
+  color: #5089D3;   /* Celeste Yavino */
+  font-weight: 700;
+  font-size: 40px;
+}
+
+/* Parrafo negro solo en esta sección */
+.valores-detalle-bg .valores-desc {
+  color: #30302E;   /* Negro suave */
+  font-size: 20px;
+}
+
+/* Responsive para pantallas chicas */
+@media (max-width: 576px) {
+  .valores-detalle-bg .valores-img {
+    max-width: 270px;
+    margin-bottom: 14px;
+  }
+  .valores-detalle-bg .valores-subtitulo {
+    font-size: 40px
+  }
+  .valores-detalle-bg .valores-desc {
+    font-size: 20px;
+  }
+}
+.valores-detalle-bg {
+  background-image: url('IMAGENES/FONDITODETALLEAMA.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1509px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .valores-detalle-bg {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* Stats del HERO */
+.hero-stats {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  gap: 2.5rem;
+}
+
+.stat-box {
+  min-width: 120px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #5c97de; /* celeste */
+  letter-spacing: -2px;
+}
+
+.stat-plus {
+  color: #ffd200; /* amarillo */
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.stat-label {
+  color: #232323;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0.15em;
+}
+
+/* Responsive ajuste */
+@media (max-width: 767px) {
+  .hero-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .stat-box {
+    min-width: unset;
+  }
+}
+@media (max-width: 767px) {
+  .team-section .row > [class*='col-'] {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .team-section img.maridaje-img {
+    max-width: 220px;
+    margin-bottom: 1.2rem;
+  }
+
+  .team-nombre-custom {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .team-desc-custom {
+    font-size: 19px;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 0;
+  }
+}
+/* ====== TESTIMONIOS GENERAL ====== */
+.testimonios-section {
+  background: #ffd7001a; /* Amarillo pálido muy suave (ajustá a gusto) */
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.testimonios-volanta {
+  color: #444;
+  font-size: 1.05rem;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.testimonios-titulo {
+  color: #5292df;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.testimonios-paginador {
+  text-align: center;
+}
+.punto {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background: #eee;
+  transition: background 0.2s;
+}
+.punto.active {
+  background: #ffd100;
+}
+
+/* ====== TARJETA DE TESTIMONIO ====== */
+.testimonio-card {
+  background-image: url('IMAGENES/testimo.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: nonepx;
+  box-shadow: 0 4px 28px 0 rgba(0,0,0,0.10);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  min-height: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  border: 0;
+}
+
+/* Las estrellas */
+.testimonio-stars {
+  font-size: 20px;
+  color: #ffd100;
+  letter-spacing: 0.1em;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  line-height: 1;
+}
+
+/* Texto del testimonio */
+.testimonio-text {
+  color: #30302E;
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 400;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Foto y nombre */
+.testimonio-img-nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 18px;
+}
+.testimonio-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.08);
+  margin-bottom: 0.7rem;
+}
+.testimonio-nombre {
+  color: #5089D3;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 991px) {
+  .testimonio-card {
+    min-height: 420px;
+    padding: 2rem 1rem 1.7rem 1rem;
+  }
+  .testimonio-img {
+    width: 72px;
+    height: 72px;
+  }
+  .testimonios-titulo {
+    font-size: 2rem;
+  }
+  .testimonio-stars {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonios-section {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+  .testimonio-card {
+    min-height: 360px;
+    padding: 1.4rem 0.7rem 1.5rem 0.7rem;
+    margin-bottom: 22px;
+  }
+  .testimonio-img {
+    width: 62px;
+    height: 62px;
+  }
+  .testimonios-titulo {
+    font-size: 1.35rem;
+  }
+  .testimonio-text {
+    font-size: 1.05rem;
+    min-height: 85px;
+  }
+  .testimonio-nombre {
+    font-size: 1.1rem;
+  }
+}
+
+/* Cambiá el fondo de la sección SOLO en detalle */
+.detalle-pasos-section {
+  background-image: url('IMAGENES/fondo-asi-funciona.png'); /* Cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 850px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Cards personalizadas con IMAGEN DE FONDO */
+.detalle-pasos-group .detalle-paso-card {
+ background-image: url('IMAGENES/Mask-group.png');
+  background-size: contain;          /* O cover si preferís que se recorte */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1px;
+  padding: 10px 32px;
+  /* margin-bottom: 0;  Ya no hace falta si usás mb-2 o mb-1 en el HTML */
+}
+
+/* Opcional: overlay suave si querés que el texto resalte más */
+.detalle-pasos-group .detalle-paso-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: NONE;
+}
+
+/* Para que el contenido esté por arriba del overlay */
+.detalle-pasos-group .detalle-paso-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.detalle-pasos-group .detalle-paso-numero {
+  background: #FFD008;
+  color: #5089D3;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 18px;
+}
+
+.detalle-pasos-group .detalle-paso-texto {
+  font-size: 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .detalle-pasos-section .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .detalle-pasos-section {
+    min-height: 0;
+    padding: 0;
+  }
+  .detalle-pasos-group {
+    margin-top: 1rem;
+  }
+  .detalle-pasos-group .detalle-paso-card {
+    font-size: 0.97rem;
+    padding: 10px 6px;
+    border-radius: 18px;
+  }
+  .detalle-pasos-group .detalle-paso-numero {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.05rem;
+    margin-right: 0.3rem;
+  }
+  .detalle-pasos-group .detalle-paso-card::before {
+    border-radius: 18px;
+  }
+}
+/* Fondo solo para la galería de la página de detalle */
+.galeria-detalle-bg {
+  background-image: url('IMAGENES/FONDO-GALERIA-DETALLE.png');  /* Cambiá el nombre si tu imagen es otra */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1197px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Asegurá que la sección mantenga el fondo en mobile */
+@media (max-width: 767px) {
+  .galeria-detalle-bg {
+    background-size: cover;
+    background-position: center;
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+}
+/* Asegurá que la sección mantenga el fondo en mobile */
+@media (max-width: 393px) {
+  .galeria-detalle-bg {
+    background-size: cover;
+    background-position: center;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    min-height: 1913px;
+  }
+}
+/* Fondo general para la sección de testimonios SOLO en detalle */
+.testimonios-detalle-bg {
+  background-image: url('IMAGENES/fondotestimonios.png'); /* Cambiá por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1085px;
+  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* Card de testimonio con fondo (ver imagen completa) */
+.testimonio-card {
+  background-image: url(IMAGENES/testimo.png);
+  background-size: contain;       /* <-- Esto hace que la imagen no se recorte, se vea toda */
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 800px;             /* Ajustá según tu imagen */
+  width: 100%;
+  max-width: 700px;              /* Ajustá para que no se pase de ancho */
+  margin: 0 auto;
+  border-radius: none;
+  box-shadow: none;
+  padding: 1.4rem 1.1rem 1.2rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  border: 0;
+  transition: transform .18s;
+}
+
+.testimonio-card:hover {
+  transform: scale(1.03);
+  box-shadow: none;
+}
+
+/* Responsivo: para pantallas chicas */
+@media (max-width: 767px) {
+  .testimonio-card {
+    min-height: 340px;
+    max-width: 95%;
+    padding: 1.2rem .6rem 1.4rem .6rem;
+  }
+  .testimonios-detalle-bg {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+}
+.testimonio-text {
+  color: #30302E;
+  font-size: 20px;
+  margin-bottom: 0.5rem;  /* Un poquito de aire abajo */
+  margin-top: 0.5rem;     /* Aire arriba */
+  font-weight: 400;
+  /* min-height: 140px; */  /* Comentá o eliminá esto si no querés forzar altura */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  padding: 0 0.7rem;      /* Aire a los costados */
+  line-height: 1.32;      /* Mejor lectura */
+}
+.testimonio-stars {
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.testimonio-img-nombre {
+  margin-top: 1.2rem;
+}
+
+.testimonio-nombre {
+  margin-bottom: 0;
+  margin-top: 0.4rem;
+}
+<div class="testimonio-card">
+  <div class="testimonio-stars mb-2">★★★★☆</div>
+  <div class="testimonio-text-wrapper" style="flex: 1; display: flex; align-items: center;">
+    <p class="testimonio-text">
+      (texto...)
+    </p>
+  </div>
+  <div class="testimonio-img-nombre">
+    ...
+  </div>
+</div>
+.testimonio-card {
+  min-height: 480px;  /* Probá bajando esto, depende de la imagen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 1.5rem;
+}
+
+.testimonio-text-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;    /* Centra verticalmente */
+  justify-content: center;
+  margin-top: 1.5rem;     /* Ajustá margen superior/inferior para mover el bloque */
+  margin-bottom: 0.5rem;
+}
+/* Fondo general de la sección testimonios en detalle */
+.testimonios-detalle-bg {
+  background-image: url('IMAGENES/fondotestimonios.png'); /* Cambiá el nombre si tu imagen es otra */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1085px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Card de testimonio: imagen de fondo, alto y ancho bien definidos */
+.testimonio-card {
+  background-image: url('IMAGENES/testimo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: none;
+  min-height: 690px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: none;
+  padding: 1.7rem 1.3rem 1.3rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border: none;
+  position: relative;
+}
+
+/* Ajustes para que los textos queden juntos y centrados */
+.testimonio-stars {
+  font-size: 35px;
+  color: #FFD008;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  line-height: 1;
+  letter-spacing: 10px;
+}
+
+.testimonio-text {
+  color: #30302E;
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 400;
+  min-height: 100px;
+  line-height: 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0.2rem;
+}
+
+.testimonio-img-nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.testimonio-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.08);
+  margin-bottom: 10px;
+}
+
+.testimonio-nombre {
+  color: #5089D3;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 0.1rem;
+  margin-bottom: 0;
+}
+
+/* Responsive: que no explote en mobile */
+@media (max-width: 768px) {
+  .testimonios-detalle-bg {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .testimonio-card {
+    min-height: 420px;
+    max-width: 95vw;
+    padding: 1.2rem 0.8rem 1.1rem 0.8rem;
+  }
+  .testimonio-img {
+    width: 65px;
+    height: 65px;
+  }
+  .testimonio-nombre {
+    font-size: 1rem;
+  }
+  .testimonio-text {
+    font-size: 0.95rem;
+    min-height: 80px;
+  }
+}
+
+.testimonios-detalle-bg {
+  background-image: url('IMAGENES/fondotestimonios.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1085px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Card de testimonio: menos padding, sin min-height gigante */
+.testimonio-card {
+  background-image: url('IMAGENES/testimo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0; /* No redondeado si querés la imagen entera */
+  min-height: 530px;
+  max-width: 430px;
+  margin: 0 auto;
+  box-shadow: none;
+  padding: 1.2rem 1.1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border: none;
+  position: relative;
+}
+
+/* Márgenes mucho más chicos */
+.testimonio-stars {
+  font-size: 32px;
+  color: #FFD008;
+  margin-bottom: 12px;
+  margin-top: 10px;
+  line-height: 1;
+  letter-spacing: 4px;
+}
+
+.testimonio-text {
+  color: #30302E;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-weight: 400;
+  line-height: 1.34;
+  min-height: unset;
+  padding: 0 0.2rem;
+}
+
+.testimonio-img-nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.testimonio-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.08);
+  margin-bottom: 7px;
+}
+
+.testimonio-nombre {
+  color: #5089D3;
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 0.1rem;
+  margin-bottom: 0;
+}
+
+/* Responsive para mobile */
+@media (max-width: 768px) {
+  .testimonios-detalle-bg {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .testimonio-card {
+    min-height: 370px;
+    max-width: 98vw;
+    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+  }
+  .testimonio-img {
+    width: 56px;
+    height: 56px;
+  }
+  .testimonio-nombre {
+    font-size: 15px;
+  }
+  .testimonio-text {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  .testimonio-stars {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+}
+.testimonio-card {
+  background-image: url('IMAGENES/testimo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  min-height: unset;         /* <- SACALO o ponelo bien bajo */
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: none;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* No uses space-between */
+  text-align: center;
+  border: none;
+  position: relative;
+}
+.testimonio-stars { margin: 6px 0 8px 0; font-size: 25px; }
+.testimonio-text  { margin: 0 0 6px 0; font-size: 18px; line-height: 1.21; }
+.testimonio-img-nombre { margin-top: 10px; }
+.testimonio-img   { width: 70px; height: 70px; margin-bottom: 4px; }
+.testimonio-nombre{ margin: 0; font-size: 18px; }
+/* Card de testimonio en DETALLE: fondo, tamaño fijo, centrado */
+.testimonio-card {
+  background-image: url('IMAGENES/testimo.png');
+  background-size: 100% 100%;   /* Importante: que no se repita y escale perfecto */
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;              /* Sin bordes redondeados */
+  width: 100%;                   /* Que respete el ancho de la columna */
+  max-width: 520px;              /* Tamaño real de la imagen de la estampilla */
+  min-height: 700px;             /* Igual al alto real de la imagen */
+  aspect-ratio: 520 / 700;       /* Que siempre mantenga proporción de la imagen */
+  margin: 0 auto;
+  box-shadow: none;
+  padding: 2.6rem 2rem 1.3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estrellas arriba */
+.testimonio-stars {
+  font-size: 30px;
+  color: #FFD008;
+  margin-bottom: 20px;
+  margin-top: 70px;
+  line-height: 1;
+  letter-spacing: 10px;
+}
+
+/* Texto del testimonio */
+.testimonio-text {
+  color: #30302E;
+  font-size: 23px;
+  line-height: 37px;
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+  min-height: 120px;
+  padding: 0 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+/* Foto y nombre */
+.testimonio-img-nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.testimonio-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.08);
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.testimonio-nombre {
+  color: #5089D3;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 70px;
+  margin-top: 30px;
+}
+
+/* Responsive: que nunca explote ni se salga del marco */
+@media (max-width: 393px) {
+  .testimonio-card {
+    max-width: 500px;
+    min-height: 58vw;  /* Aproximá la proporción a la imagen */
+    aspect-ratio: 520 / 700;
+    padding: 2.2rem 0.6rem 1.1rem 0.6rem;
+  }
+  .testimonio-img {
+    width: 65px;
+    height: 65px;
+  }
+  .testimonio-nombre {
+    font-size: 30px;
+  }
+  .testimonio-text {
+    font-size: 15px;
+    min-height: 60px;
+  }
+}
+
+/* Truco extra: que el contenido NUNCA toque los bordes de la estampilla */
+.testimonio-card > * {
+  max-width: 94%;
+}
+@media (max-width: 450px) {
+  .testimonio-card {
+    max-width: 96vw;
+    min-height: 75vw;   /* Un poco más alto, para no apretar el contenido */
+    padding: 1.2rem 0.3rem 0.9rem 0.3rem;
+  }
+  .testimonio-stars {
+    font-size: 20px;  /* Estrellas más chicas */
+    margin-bottom: 10px;
+    margin-top: 15px;
+    letter-spacing: 0.4rem;
+  }
+  .testimonio-img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.3rem;
+    margin-top: 0.2rem;
+  }
+  .testimonio-nombre {
+    font-size: 25px;
+    margin-top: 0.1rem;
+    margin-bottom: 50px;
+  }
+  .testimonio-text {
+    font-size: 15px;
+    min-height: 33px;
+    line-height: 26px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+}
+/* Hace el FAQ más angosto y centrado */
+.section-faqs-figma .accordion-faq-custom {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Color y borde de las preguntas */
+.accordion-faq-custom .accordion-item {
+  border: 2px solid #5089D3; /* Celeste clarito */
+  border-radius: 8px !important;
+  margin-bottom: 16px;
+  background: #F4F2EA;
+  overflow: hidden;
+}
+
+/* Pregunta/título: fuente azul, más grande y negrita */
+.accordion-faq-custom .accordion-button {
+  color: #5089D3;
+  font-weight: 500;
+  font-size: 17px;
+  border: none;
+  border-radius: 0 !important;
+  padding: 10px 20px;
+  box-shadow: none !important;
+  transition: background .2s;
+}
+
+/* Flechita (icono de collapse) también azul */
+.accordion-faq-custom .accordion-button::after {
+  filter: hue-rotate(175deg) brightness(0.9); /* Simula celeste sin SVG */
+}
+
+/* El body de la respuesta, más prolijo y celestito */
+.accordion-faq-custom .accordion-body {
+  background: #F8FBFF;
+  color: #5089d3;
+  font-size: 1rem;
+  padding: 16px 24px 18px 24px;
+}
+
+/* Extra: saca el borde azul default de Bootstrap cuando está activa */
+.accordion-faq-custom .accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+/* Hace el FAQ más angosto y centrado */
+.section-faqs-figma .accordion-faq-custom {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Color y borde de las preguntas */
+.accordion-faq-custom .accordion-item {
+  border: 2px solid #5089D3 !important;
+  border-radius: 8px !important;
+  margin-bottom: 16px;
+  background: #F4F2EA !important;
+  overflow: hidden;
+}
+
+/* Pregunta/título: fuente azul, más grande y negrita */
+.accordion-faq-custom .accordion-button {
+  color: #5089D3 !important;
+  font-weight: 500;
+  font-size: 17px;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 10px 20px;
+  box-shadow: none !important;
+  transition: background .2s;
+  background: #F4F2EA !important;
+  text-align: center;
+  justify-content: center !important;
+  align-items: center;
+}
+
+/* ESTE ES EL TRUCO: saca la línea celeste de Bootstrap! */
+.accordion-faq-custom .accordion-button::after {
+  background-image: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  height: 0 !important;
+  min-width: 24px; /* flechita ok */
+  filter: hue-rotate(175deg) brightness(0.9); /* Azul, si querés */
+  content: ""; /* fuerza el reset */
+}
+
+/* Body de la respuesta, celestito y centrado */
+.accordion-faq-custom .accordion-body {
+  background: #F4F2EA!important;
+  color: #5089d3 !important;
+  font-size: 1rem;
+  padding: 16px 24px 18px 24px;
+  text-align: center;
+}
+
+/* Quita sombra al foco */
+.accordion-faq-custom .accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+/* Hace el FAQ más angosto y centrado */
+.section-faqs-figma .accordion-faq-custom {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Color y borde de las preguntas */
+.accordion-faq-custom .accordion-item {
+  border: 2px solid #5089D3 !important;
+  border-radius: 12px !important;
+  margin-bottom: 16px;
+  background: #F4F2EA !important;
+  overflow: hidden;
+}
+
+/* Pregunta/título: fuente azul, más grande y negrita, centrada */
+.accordion-faq-custom .accordion-button {
+  color: #5089D3 !important;
+  font-weight: 500;
+  font-size: 19px;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 14px 24px;
+  box-shadow: none !important;
+  background: #F4F2EA !important;
+  text-align: center;
+  justify-content: center !important;
+  align-items: center;
+  display: flex;
+}
+
+/* Este es el truco: saca la línea celeste de Bootstrap */
+.accordion-faq-custom .accordion-button::after {
+  /* Mostrá sólo el caret */
+  background-image: var(--bs-accordion-btn-icon) !important;
+  background-size: 1.3rem;
+  background-position: center right;
+  background-repeat: no-repeat;
+  /* Elimina el border-bottom celeste */
+  border-bottom: none !important;
+  height: 1.3rem !important;
+  min-width: 1.3rem;
+  width: 1.3rem !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  filter: hue-rotate(175deg) brightness(0.9); /* Opcional: azulito */
+  box-shadow: none !important;
+  content: "" !important;
+}
+
+/* Body de la respuesta, celestito y centrado */
+.accordion-faq-custom .accordion-body {
+  background: #F8FBFF !important;
+  color: #5089d3 !important;
+  font-size: 1rem;
+  padding: 16px 24px 18px 24px;
+  text-align: center;
+}
+
+/* Quita sombra al foco */
+.accordion-faq-custom .accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.accordion-faq-custom .accordion-button::after {
+  display: inline-block !important;
+}
+.valores-detalle-bg {
+  background-image: url('IMAGENES/fondo-que-incluye.png'); /* O la que uses */
+  background-size: cover;      /* Asegura que cubra todo el section */
+  background-position: top center; /* Mantiene la parte superior visible */
+  background-repeat: no-repeat;
+  min-height: 1509px;           /* Que mínimo ocupe toda la pantalla, podés ajustar */
+  width: 100%;
+}
+.faqs-bg {
+  background-image: url('IMAGENES/FONDO-PREGUNTAS.png'); /* Cambiá el nombre por el tuyo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .faqs-bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-size: cover; /* Opcional: podés probar 'contain' si se corta raro */
+  }
+}
+.accordion-faq-custom .accordion-body {
+  background: #5089D3 !important;  /* Celeste oscuro */
+  color: #fff !important;          /* Texto blanco */
+  font-size: 1.13rem;
+  padding: 22px 24px 24px 24px;
+  text-align: left;
+  border-radius: 0 0 8px 8px;
+}
+
+.accordion-faq-custom .accordion-button:not(.collapsed) {
+  background: #5089D3 !important;
+  color: #fff !important;
+}
+html {
+  scroll-behavior: smooth;
 }

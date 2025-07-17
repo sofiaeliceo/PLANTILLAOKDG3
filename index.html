@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YaVino - Pagina de suscripciones</title>
-    <link rel="icon" href="IMAGENES/lucide_grape2.png" type="IMAGENES/lucide_grape.png">
+    <link rel="icon" href="IMAGENES/uvita1.png" type="IMAGENES/lucide_grape.png">
 </head>
 <body>
     <!-- ... -->
@@ -31,41 +31,53 @@
   <div class="container">
     <!-- Logo -->
     <a class="navbar-brand" href="#">
-      <img src="IMAGENES/YaVino.png" alt="Logo YaVino" class="navbar-logo"> <!-- Cambiá el src por tu PNG -->
+      <img src="IMAGENES/YaVino.png" alt="Logo YaVino" class="navbar-logo">
     </a>
     <!-- Botón hamburguesa mobile -->
-   <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-  <span class="navbar-toggler-icon"><span></span></span>
-</button>
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"><span></span></span>
+    </button>
     <!-- Menú -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav align-items-center">
         <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Como funciona</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Suscripciones</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
         <li class="nav-item">
-          <a class="btn btn-navbar-cta" href="#">¡Empezar hoy!</a>
+  <a class="nav-link" href="#qs">¿Quiénes somos?</a>
+</li>
+        <li class="nav-item">
+  <a class="nav-link" href="#funcion">¿Como funciona?</a>
+</li>
+ <li class="nav-item">
+  <a class="nav-link" href="#sus">Suscripciones</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="#te">Team</a>
+</li>
+        <li class="nav-item">
+          <a class="btn btn-navbar-cta" href="detalle.html">¡Empezar hoy!</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<!-- Línea negra debajo de la nav -->
+<div style="height:2px; background:#222; width:100%;"></div>
+
 <!-- /NAVBAR -->
 
-<!-- HERO: Sección de portada con llamado a la acción con fondo -->
-<section class="section-spacing bg-cover d-flex align-items-center" style="background-image: url('IMAGENES/F1\ -\ HERO.png'); min-height: 100vh;">
-  <div class="container hero-container">
+<!-- HERO: Sección de portada con imagen de fondo y overlay -->
+<section class="hero-section section-spacing bg-cover d-flex align-items-center position-relative">
+  <div class="container hero-container position-relative" style="z-index:2;">
     <div class="row align-items-center">
       <!-- COLUMNA IZQUIERDA: texto, botones y stats -->
       <div class="col-lg-6 hero-text-col">
-        <span class="volanta-custom">– VINOS LISTOS PARA VOS –</span>
+        <span class="volanta-custom">VINOS LISTOS PARA VOS</span>
         <h1 class="hero-title">Nuevo mes,<br>nuevo vino.</h1>
         <p class="hero-lead">
-          Recibí <b>cada mes</b> una selección curada por sommeliers, con vinos únicos,<br>
-          fichas sensoriales, maridajes y acceso a experiencias exclusivas.
+          Recibí <b>cada mes</b> una selección curada por sommeliers, con vinos únicos, fichas sensoriales, maridajes y acceso a experiencias exclusivas.
         </p>
-        <div class="btns-stack">
+        <div class="btns-stack mb-4">
           <a href="detalle.html" class="btn-pill-yellow">
             Descubrí tu plan
             <span class="divider"></span>
@@ -77,89 +89,79 @@
             <i class="bi bi-arrow-right"></i>
           </a>
         </div>
-
-        <!-- ACA VAN LAS STATS: justo debajo de los botones -->
-        <div class="stats-row">
-          <div class="stat-item">
+        <!-- STATS: Agregá esto -->
+        <div class="hero-stats d-flex flex-wrap gap-4 gap-md-5">
+          <div class="stat-box text-center">
             <span class="stat-number">20K<span class="stat-plus">+</span></span>
-            <span class="stat-label">Cajas entregadas</span>
+            <div class="stat-label">Cajas entregadas</div>
           </div>
-          <div class="stat-item">
+          <div class="stat-box text-center">
             <span class="stat-number">32K<span class="stat-plus">+</span></span>
-            <span class="stat-label">Usuarios activos</span>
+            <div class="stat-label">Usuarios activos</div>
           </div>
-          <div class="stat-item">
+          <div class="stat-box text-center">
             <span class="stat-number">3K<span class="stat-plus">+</span></span>
-            <span class="stat-label">WineSwapeados</span>
+            <div class="stat-label">WineSwapeados</div>
           </div>
         </div>
-        <!-- FIN STATS -->
       </div>
-      <!-- COLUMNA DERECHA: imagen -->
+      <!-- COLUMNA DERECHA: imagen destacada -->
       <div class="col-lg-6 hero-img-col text-center">
-        <img src="IMAGENES/no.png" class="img-fluid img-rounded" alt="Imagen Hero">
+        <img src="IMAGENES/Mesa-de-trabajo-3@4x.png" class="img-fluid img-rounded hero-img" alt="Imagen Hero">
       </div>
     </div>
   </div>
+  <div class="hero-overlay"></div>
 </section>
-<!-- /HERO -->
 
-<!-- SECCIÓN QUIENES SOMOS ADAPTADA -->
-<section class="section-bg-full quienes-section" style="background-image: url('IMAGENES/fondo-quienes-somos.jpg');">
-  <div class="container py-5">
+
+
+<!-- SECCIÓN: QUIENES SOMOS -->
+<section id="qs" class="section-spacing container-fluid quienes-bg d-flex align-items-center">
+  <div class="container">
     <div class="row align-items-center">
-      <!-- Imagen -->
-      <div class="col-lg-6 text-center mb-4 mb-lg-0">
-        <img src="IMAGENES/quienessomos.png" class="img-fluid img-sello-equipo" alt="Imagen ilustrativa">
-      </div>
-      <!-- Bloque de texto -->
-      <div class="col-lg-6 ps-lg-5">
-        <span class="volanta-lateral mb-2">– QUIENES SOMOS –</span>
-        <h2 class="h2-lateral mb-3">Una experiencia que vale la pena.</h2>
-        <p class="parrafo-lateral mb-4">
-          Nos dedicamos a elegir <strong>botellas con onda</strong>, de bodegas chicas y copadas, para que cada mes te llegue una caja con tres vinos que te van a sorprender.<br>
-          Nuestro compromiso es <strong>hacerte disfrutar sin vueltas</strong>: buenos vinos, maridajes ricos y fichas con data útil para que aprendas mientras descorchás, a tu ritmo.
-        </p>
-        <a href="detalle.html" class="btn-pill-yellow">
-          Conocer más
-          <span class="divider"></span>
-          <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
+    <!-- Columna de imagen -->
+    <div class="col-lg-6 text-center mb-4 mb-lg-0">
+      <img src="IMAGENES/fondo-quienes-somos.png" class="img-fluid img-rounded hero-img" alt="Imagen Hero">
+    </div>
+    <!-- Columna de texto -->
+    <div class="col-lg-6">
+      <span class="volanta-custom">– QUIENES SOMOS –</span>
+      <h2 class="h2-custom">Una experiencia que vale la pena.</h2>
+      <p class="lead-small">Elegimos <b>botellas con onda de bodegas chicas y copadas</b> para que cada mes recibas una caja con tres vinos que te van a sorprender y te hagan brindar distinto. Nuestro compromiso:<b> hacerte disfrutar sin vueltas, con buenos vinos, maridajes ricos y fichas útiles para que aprendas mientras descorchás, a tu ritmo.</b></p>
+      <a href="detalle.html" class="btn-pill-yellow">
+            Conocer más
+            <span class="divider"></span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
     </div>
   </div>
 </section>
 <!-- /SECCIÓN QUIENES SOMOS ADAPTADA -->
 
-<!-- SECCIÓN VALORES (estilo "Beneficios" del Figma) -->
-<section class="section-bg-full valores-section d-flex align-items-center justify-content-center"
-  style="background-image: url('IMAGENES/fondo-valores.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 850px;">
+<!-- SECCIÓN VALORES (Beneficios) -->
+<section class="section-spacing valores-section">
   <div class="container">
     <div class="valores-content mx-auto text-center">
-      <span class="valores-volanta d-block mb-3">– NUESTROS VALORES –</span>
-      <h2 class="valores-title mb-5">Beneficios posta que hacen la diferencia.</h2>
+      <!-- Volanta y Título -->
+      <span class="volanta-custom valores-volanta d-block mb-3 text-center">– NUESTROS VALORES –</span>
+      <h2 class="h2-custom valores-title mb-5 text-center">Beneficios posta que hacen la diferencia.</h2>
       <div class="row justify-content-center gx-5">
         <!-- Columna 1 -->
         <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-5 mb-md-0">
-          <div class="valores-icon mb-4">
-            <img src="IMAGENES/Recurso 10@4x.png" alt="Bodegas pequeñas" class="img-fluid">
-          </div>
+          <img src="IMAGENES/Recurso 5@4x 1.png" class="img-fluid img-rounded hero-img valores-img" alt="Imagen Hero">
           <h4 class="valores-subtitulo mb-3">Bodegas pequeñas</h4>
           <p class="valores-desc m-0">Apoyamos proyectos con alma, no marcas sin historia.</p>
         </div>
         <!-- Columna 2 -->
         <div class="col-12 col-md-4 d-flex flex-column align-items-center mb-5 mb-md-0">
-          <div class="valores-icon mb-4">
-            <img src="IMAGENES/Recurso 8@4x.png" alt="Selección honesta" class="img-fluid">
-          </div>
+          <img src="IMAGENES/Recurso 6@4x 1.png" class="img-fluid img-rounded hero-img valores-img" alt="Imagen Hero">
           <h4 class="valores-subtitulo mb-3">Selección honesta</h4>
           <p class="valores-desc m-0">Te enviamos vinos que nos encantan, sin vueltas ni modas pasajeras.</p>
         </div>
         <!-- Columna 3 -->
         <div class="col-12 col-md-4 d-flex flex-column align-items-center">
-          <div class="valores-icon mb-4">
-            <img src="IMAGENES/Recurso 9@4x.png" alt="Comunidad copada" class="img-fluid">
-          </div>
+          <img src="IMAGENES/Recurso 7@4x 1.png" class="img-fluid img-rounded hero-img valores-img" alt="Imagen Hero">
           <h4 class="valores-subtitulo mb-3">Comunidad copada</h4>
           <p class="valores-desc m-0">Acá no tomás solo: te sumás a una red de gente que ama el vino como vos.</p>
         </div>
@@ -167,61 +169,64 @@
     </div>
   </div>
 </section>
-<!-- SECCIÓN VALORES (estilo "Beneficios" del Figma) -->
+<!-- /SECCIÓN VALORES (Beneficios) -->
 
+ 
 <!-- PASOS: Cómo funciona -->
-<section class="section-bg-full quienes-section" style="background-image: url('IMAGENES/fondo-quienes-somos.jpg');">
+<section id="funcion" class="section-bg-full quienes-section">
   <div class="container py-5">
     <div class="row align-items-center">
       <!-- Columna IZQUIERDA: pasos -->
       <div class="col-lg-6 ps-lg-5">
-        <span class="volanta-lateral mb-2">– ASÍ FUNCIONA YAVINO –</span>
-        <h2 class="h2-lateral mb-3">Así de simple, así de rico.</h2>
-        <div class="row g-3">
+        <span class="volanta-custom">– ASÍ FUNCIONA YAVINO –</span>
+        <h2 class="h2-custom">Así de simple, así de rico.</h2>
+        <!-- Grupo de cards de pasos -->
+        <div class="row g-0 pasos-group">
           <!-- CARD 1 -->
-          <div class="col-6">
+          <div class="col-6 mb-2">
             <div class="paso-card-custom d-flex align-items-center justify-content-center">
               <span class="paso-numero-custom me-3">1</span>
               <span class="paso-texto-custom fw-semibold">Elegí tu membresía</span>
             </div>
           </div>
           <!-- CARD 2 -->
-          <div class="col-6">
+          <div class="col-6 mb-2">
             <div class="paso-card-custom d-flex align-items-center justify-content-center">
               <span class="paso-numero-custom me-3">2</span>
               <span class="paso-texto-custom fw-semibold">Armamos tu envío</span>
             </div>
           </div>
           <!-- CARD 3 -->
-          <div class="col-6">
+          <div class="col-6 mb-2">
             <div class="paso-card-custom d-flex align-items-center justify-content-center">
               <span class="paso-numero-custom me-3">3</span>
               <span class="paso-texto-custom fw-semibold">Sumamos extras</span>
             </div>
           </div>
           <!-- CARD 4 -->
-          <div class="col-6">
+          <div class="col-6 mb-2">
             <div class="paso-card-custom d-flex align-items-center justify-content-center">
               <span class="paso-numero-custom me-3">4</span>
               <span class="paso-texto-custom fw-semibold">Lo despachamos</span>
             </div>
           </div>
           <!-- CARD 5 -->
-          <div class="col-6">
+          <div class="col-6 mb-2">
             <div class="paso-card-custom d-flex align-items-center justify-content-center">
               <span class="paso-numero-custom me-3">5</span>
               <span class="paso-texto-custom fw-semibold">Disfrutá en casa</span>
             </div>
           </div>
           <!-- CARD 6 -->
-          <div class="col-6">
+          <div class="col-6 mb-4">
             <div class="paso-card-custom d-flex align-items-center justify-content-center">
               <span class="paso-numero-custom me-3">6</span>
               <span class="paso-texto-custom fw-semibold">¡Repetí cada mes!</span>
             </div>
           </div>
         </div>
-        <a href="detalle.html" class="btn-pill-yellow mt-4">
+        <!-- Botón separado de las cards -->
+        <a href="detalle.html" class="btn-pill-yellow mt-3">
           Conocer más
           <span class="divider"></span>
           <i class="bi bi-arrow-right"></i>
@@ -229,31 +234,37 @@
       </div>
       <!-- Columna DERECHA: imagen -->
       <div class="col-lg-6 text-center mt-4 mt-lg-0">
-        <img src="IMAGENES/CLI.png" class="img-fluid img-stamp" alt="Copas de vino brindando">
+        <img src="IMAGENES/asi-funciona.png" class="img-fluid img-rounded hero-img" alt="Imagen Hero">
       </div>
     </div>
   </div>
 </section>
-<!-- PASOS: Cómo funciona -->
+<!-- /PASOS: Cómo funciona -->
 
-<!-- PLANES DE SUSCRIPCIÓN: Sección con 3 opciones destacadas -->
-<section class="section-suscripcion bg-cover text-center" style="background-image: url('IMAGENES/fondo-suscripciones.png'); background-size: cover; background-position: center;">
+
+
+
+<!-- PLANES DE SUSCRIPCIÓN -->
+<section id="sus" class="section-suscripciones-bg row align-items-center justify-content-center mt-4 g-4">
   <div class="container">
-    <span class="volanta-suscripcion mb-3 d-block">– NUESTRAS SUSCRIPCIONES –</span>
-    <h2 class="h2-suscripcion mb-2">Descubrí la propuesta ideal para vos.</h2>
+    <span class="volanta-custom valores-volanta d-block mb-3 text-center">– NUESTRAS SUSCRIPCIONES –</span>
+    <h2 class="h2-custom valores-title mb-5 text-center">Descubrí la propuesta ideal para vos.</h2>
     <div class="row justify-content-center mt-4 g-4">
       <!-- Suscrip Card 1 -->
-      <div class="col-lg-4 col-md-6 d-flex">
-        <div class="suscrip-box2-figma suscrip-card-corto flex-fill">
-          <span class="suscrip-volanta">– BOX 1 –</span>
-          <h3 class="suscrip-titulo">Box clásico</h3>
-          <p class="suscrip-precio-figma">$49.000 <span>/ mes</span></p>
-          <p class="suscrip-desc">Ideal para quienes están empezando.</p>
-          <p class="suscrip-subt"><strong>¿Qué incluye?</strong></p>
-          <div class="suscrip-img-wrapper mb-3">
-            <img src="IMAGENES/cajitaaa 1.png" alt="Box clásico" class="img-fluid" />
+      <div class="col-lg-4 col-md-6 d-flex align-items-center">
+  <div class="suscrip-card-corto suscrip-corta-ajuste flex-fill d-flex flex-column align-items-center py-4 px-3 position-relative card-centrada">
+          <div class="cinta-recomendado mb-2">
+            <span class="texto-recomendado">BASICO</span>
           </div>
-          <ul class="suscrip-lista-figma">
+          <span class="suscrip-volanta mb-2">– BOX 1 –</span>
+          <h3 class="suscrip-titulo mb-2">Box clásico</h3>
+          <p class="suscrip-precio-figma mb-2">$49.000 <span>/ mes</span></p>
+          <p class="suscrip-desc mb-2">Ideal para quienes están empezando.</p>
+          <p class="suscrip-subt mb-3"><strong>¿Qué incluye?</strong></p>
+          <div class="suscrip-img-wrapper mb-3">
+            <img src="IMAGENES/caja1.png" alt="Box clásico" class="suscrip-img-card" />
+          </div>
+          <ul class="suscrip-lista-figma mb-3">
             <li><span>1 vino tinto del norte</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
             <li><span>1 vino blanco</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
             <li><span>Maridaje al vacío (Básico)</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
@@ -261,27 +272,26 @@
             <li class="no-incluye"><span>Beneficio WineSwap</span> <span class="circle-check circle-cross"><i class="bi bi-x"></i></span></li>
             <li class="no-incluye"><span>Acceso a cata de vino</span> <span class="circle-check circle-cross"><i class="bi bi-x"></i></span></li>
           </ul>
-          <a href="#" class="btn-pill-yellow btn-suscrip-custom mt-4 w-100 d-flex flex-column flex-sm-row align-items-center justify-content-center">
-            <span class="suscrip-text">¡Lo quiero!</span>
-            <span class="divider-vertical mx-3 d-none d-sm-inline"></span>
-            <i class="bi bi-arrow-right"></i>
-          </a>
+          <a href="#" class="btn-pill-yellow btn-suscrip-custom mt-4 w-100 btn-ajuste-card">
+  ¡Lo quiero!
+  <span class="divider-vertical mx-3 d-none d-sm-inline"></span>
+  <i class="bi bi-arrow-right"></i>
+</a>
         </div>
       </div>
       <!-- Suscrip Card 2 -->
       <div class="col-lg-4 col-md-6 d-flex">
-        <div class="suscrip-box2-figma suscrip-card-corto flex-fill position-relative">
-          <div class="cinta-recomendado">
-            <span class="barrita-recomendado"></span>
+        <div class="suscrip-card-corto flex-fill d-flex flex-column align-items-center py-4 px-3 position-relative">
+          <div class="cinta-recomendado mb-2">
             <span class="texto-recomendado">RECOMENDADO</span>
           </div>
-          <span class="suscrip-volanta">– BOX 2 –</span>
-          <h3 class="suscrip-titulo">Box curado</h3>
-          <p class="suscrip-precio-figma">$55.000 <span>/ mes</span></p>
-          <p class="suscrip-desc">Más identidad y detalles.</p>
-          <p class="suscrip-subt"><strong>¿Qué incluye?</strong></p>
+          <span class="suscrip-volanta mb-2">– BOX 2 –</span>
+          <h3 class="suscrip-titulo mb-2">Box curado</h3>
+          <p class="suscrip-precio-figma mb-2">$55.000 <span>/ mes</span></p>
+          <p class="suscrip-desc mb-2">Más identidad y detalles.</p>
+          <p class="suscrip-subt mb-3"><strong>¿Qué incluye?</strong></p>
           <div class="suscrip-img-wrapper mb-3">
-            <img src="IMAGENES/cajitaaa 1.png" alt="Box curado" class="img-fluid" />
+            <img src="IMAGENES/caja2.png" class="suscrip-img-card" alt="Box curado" />
           </div>
           <ul class="suscrip-lista-figma">
             <li><span>1 vino tinto del sur</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
@@ -292,7 +302,7 @@
             <li><span>Cupón 10% de descuento</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
             <li class="no-incluye"><span>Acceso a cata de vino</span> <span class="circle-check circle-cross"><i class="bi bi-x"></i></span></li>
           </ul>
-          <a href="detalle.html" class="btn-pill-yellow btn-suscrip-custom mt-4 w-100 d-flex flex-column flex-sm-row align-items-center justify-content-center">
+          <a href="detalle.html" class="btn-pill-yellow btn-suscrip-custom w-100 d-flex flex-column flex-sm-row align-items-center justify-content-center mt-auto">
             <span class="suscrip-text">¡Lo quiero!</span>
             <span class="divider-vertical mx-3 d-none d-sm-inline"></span>
             <i class="bi bi-arrow-right"></i>
@@ -300,17 +310,20 @@
         </div>
       </div>
       <!-- Suscrip Card 3 -->
-      <div class="col-lg-4 col-md-6 d-flex">
-        <div class="suscrip-box2-figma suscrip-card-corto flex-fill">
-          <span class="suscrip-volanta">– BOX 3 –</span>
-          <h3 class="suscrip-titulo">Box explorador</h3>
-          <p class="suscrip-precio-figma">$60.000 <span>/ mes</span></p>
-          <p class="suscrip-desc">Para los expertos, todo desbloqueado!</p>
-          <p class="suscrip-subt"><strong>¿Qué incluye?</strong></p>
-          <div class="suscrip-img-wrapper mb-3">
-            <img src="IMAGENES/cajitaaa 1.png" alt="Box explorador" class="img-fluid " />
+      <div class="col-lg-4 col-md-6 d-flex align-items-center">
+  <div class="suscrip-card-corto suscrip-corta-ajuste flex-fill d-flex flex-column align-items-center py-4 px-3 position-relative card-centrada">
+          <div class="cinta-recomendado mb-2">
+            <span class="texto-recomendado">PREMIUM</span>
           </div>
-          <ul class="suscrip-lista-figma">
+          <span class="suscrip-volanta mb-2">– BOX 3 –</span>
+          <h3 class="suscrip-titulo mb-2">Box explorador</h3>
+          <p class="suscrip-precio-figma mb-2">$60.000 <span>/ mes</span></p>
+          <p class="suscrip-desc mb-2">Para los expertos, todo desbloqueado!</p>
+          <p class="suscrip-subt mb-3"><strong>¿Qué incluye?</strong></p>
+          <div class="suscrip-img-wrapper mb-3">
+            <img src="IMAGENES/caja3.png" alt="Box explorador" class="suscrip-img-card" />
+          </div>
+          <ul class="suscrip-lista-figma mb-3">
             <li><span>1 vino sorpresa</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
             <li><span>Copa de vino</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
             <li><span>Maridaje temático</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
@@ -318,11 +331,12 @@
             <li><span>Beneficio WineSwap</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
             <li><span>Acceso a cata de vino</span> <span class="circle-check"><i class="bi bi-check"></i></span></li>
           </ul>
-          <a href="detalle.html" class="btn-pill-yellow btn-suscrip-custom mt-4 w-100 d-flex flex-column flex-sm-row align-items-center justify-content-center">
-            <span class="suscrip-text">¡Lo quiero!</span>
-            <span class="divider-vertical mx-3 d-none d-sm-inline"></span>
-            <i class="bi bi-arrow-right"></i>
-          </a>
+         <a href="#" class="btn-pill-yellow btn-suscrip-custom mt-4 w-100 btn-ajuste-card">
+  ¡Lo quiero!
+  <span class="divider-vertical mx-3 d-none d-sm-inline"></span>
+  <i class="bi bi-arrow-right"></i>
+</a>
+
         </div>
       </div>
     </div>
@@ -330,59 +344,138 @@
 </section>
 <!-- /PLANES DE SUSCRIPCIÓN -->
 
+
 <!-- MARIDAJES Y FICHAS: Sección de dos columnas -->
-<section class="section-maridaje-fichas py-5">
+<section class="section-maridaje-fichas py-5 bg-maridaje-fichas">
   <div class="container">
-    <span class="volanta-quienes d-block mb-2">– UN PLUS EN CADA PLAN –</span>
-    <h2 class="h2-quienes mb-5">Maridajes de calidad y fichas sensoriales para cada vino.</h2>
-    <div class="row gx-5 gy-5">
+   <span class="volanta-maridaje mb-3 text-center d-block">– UN PLUS EN CADA PLAN –</span>
+<h2 class="h2-maridaje mb-5 text-center">Maridajes de calidad y fichas sensoriales para cada vino.</h2>
+    <div class="row gx-5 gy-5 justify-content-center">
       <!-- Columna 1 -->
-      <div class="col-lg-6 d-flex flex-column align-items-center">
-        <img src="IMAGENES/maridaje.png" alt="Foto maridaje" class="maridaje-img mb-4">
-        <div class="maridaje-bottom-row w-100 d-flex align-items-center justify-content-between">
-          <div>
+      <div class="col-lg-6 d-flex flex-column align-items-center align-items-lg-end">
+        <div class="maridaje-img-wrapper mb-4">
+          <img src="IMAGENES/TABLA-MARIDAJE.png" class="img-fluid maridaje-img" alt="Tabla de Maridaje">
+        </div>
+        <div class="maridaje-bottom-row w-100 d-flex align-items-center justify-content-between gap-3">
+          <div class="text-start">
             <span class="volanta-maridaje-sec d-block">– NUESTROS MARIDAJES –</span>
-            <h3 class="h3-maridaje">Conocé cómo cada vino se eleva con un simple bocado.</h3>
+            <h3 class="h3-maridaje mb-0">Conocé cómo cada vino se eleva con un simple bocado.</h3>
           </div>
-          <a href="#" class="btn-maridaje-card" title="Ver más"><i class="bi bi-arrow-right"></i></a>
+          <a href="#" class="btn-maridaje-card" title="Ver más">
+            <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
       </div>
       <!-- Columna 2 -->
-      <div class="col-lg-6 d-flex flex-column align-items-center">
-        <img src="IMAGENES/maridaje.png" alt="Foto ficha sensorial" class="maridaje-img mb-4">
-        <div class="maridaje-bottom-row w-100 d-flex align-items-center justify-content-between">
-          <div>
+      <div class="col-lg-6 d-flex flex-column align-items-center align-items-lg-start">
+        <div class="maridaje-img-wrapper mb-4">
+          <img src="IMAGENES/fichacard.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+        </div>
+        <div class="maridaje-bottom-row w-100 d-flex align-items-center justify-content-between gap-3">
+          <div class="text-start">
             <span class="volanta-maridaje-sec d-block">– FICHAS SENSORIALES –</span>
-            <h3 class="h3-maridaje">Fichas sensoriales que guían tu experiencia.</h3>
+            <h3 class="h3-maridaje mb-0">Fichas sensoriales que guían tu experiencia.</h3>
           </div>
-          <a href="detalle.html" class="btn-maridaje-card" title="Ver más"><i class="bi bi-arrow-right"></i></a>
+          <a href="detalle.html" class="btn-maridaje-card" title="Ver más">
+            <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
       </div>
     </div>
   </div>
-</
+</section>
+<!-- MARIDAJES Y FICHAS: Sección de dos columnas -->
 
-<!-- BODEGAS QUE NOS BANCAN -->
-<section class="bodegas-section text-center" style="background-image: url('IMAGENES/fondobodegas.png'); background-size: cover; background-position: center;">
-  <div class="container py-5">
-    <p class="volanta-custom mb-2">– BODEGAS QUE NOS BANCAN –</p>
-    <h2 class="h2-custom text-white mb-5">Nos encantaría que tu logo apareciera acá.</h2>
-    <!-- GIF animado con los logos de bodegas -->
-    <img src="IMAGENES/Comp 1.gif" alt="Logos de bodegas" class="img-fluid bodegas-logos-gif">
+<section class="galeria-section section-spacing galeria-bg">
+  <div class="container">
+    <span class="volanta-maridaje mb-3 text-center d-block">– galería sensorial –</span>
+    <h2 class="h2-maridaje mb-5 text-center">Nuestras especialidades en imágenes.</h2>
+    <div class="row g-3 justify-content-center">
+      <div class="col-12 col-md-4">
+        <img src="IMAGENES/x1.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="IMAGENES/queso1.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="IMAGENES/xx3.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="IMAGENES/jamon1.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="IMAGENES/vino1.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="IMAGENES/uva1.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- TEAM: Nuestro equipo -->
+<section id="te" class="team-section section-spacing team-bg">
+  <div class="container">
+    <span class="volanta-maridaje mb-3 text-center d-block">– apasionados por lo que hacen –</span>
+    <h2 class="h2-maridaje mb-5 text-center">Conocé a nuestro equipo de expertos.</h2>
+    <div class="row justify-content-center">
+      <!-- Integrante 1 -->
+      <div class="col-6 col-md-4 col-lg-3 mb-4 d-flex flex-column align-items-center">
+        <img src="IMAGENES/PIBA3.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+        <h4 class="team-nombre-custom mb-2">Lucía Moretti</h4>
+  <p class="team-desc-custom m-0">
+    <b>Es fanática del Malbec,</b> pero siempre lista para recomendarte algo nuevo.
+  </p>
+</div>
+      <!-- Integrante 2 -->
+      <div class="col-6 col-md-4 col-lg-3 mb-4 d-flex flex-column align-items-center">
+        <img src="IMAGENES/PIBA2.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+        <h4 class="team-nombre-custom mb-2">Cami Herrera</h4>
+        <p class="team-desc-custom m-0"><b>Amante de los blancos frescos y las cenas.</b>
+Hace que aprender de vinos sea un plan.</p>
+      </div>
+      <!-- Integrante 3 -->
+      <div class="col-6 col-md-4 col-lg-3 mb-4 d-flex flex-column align-items-center">
+        <img src="IMAGENES/PIBE1.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
+        <h4 class="team-nombre-custom mb-2">Fran Guidi</h4>
+        <p class="team-desc-custom m-0"><b>Experto en vinos naturales.</b> Cree que una buena charla empieza con una copa en la mano.</p>
+      </div>
+      <!-- Sumá más integrantes duplicando el bloque de arriba -->
+    </div>
+  </div>
+</section>
+<!-- /TEAM -->
+
+
+<!-- BODEGAS QUE NOS BANCAN -->
+<section class="bodegas-section text-center">
+  <div class="valores-content mx-auto text-center">
+    <!-- Volanta y Título -->
+    <span class="volanta-custom valores-volanta d-block mb-3 text-center">
+      – BODEGAS QUE NOS BANCAN –
+    </span>
+    <h2 class="h2-custom valores-title mb-5 text-center">
+      Nos encantaría que tu logo apareciera acá.
+    </h2>
+    <div class="row justify-content-center gx-5">
+      <!-- GIF animado con los logos de bodegas -->
+      <img src="IMAGENES/Comp 1.gif" alt="Logos de bodegas" class="img-fluid bodegas-logos-gif">
+    </div>
+  </div>
+</section>
+<!-- BODEGAS QUE NOS BANCAN -->
+
+
 <!-- CONTACTO -->
-<section class="section-spacing contacto-section">
+<section class="contacto-section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 text-center">
-        <span class="volanta-quienes mb-3 d-block">– CONTACTO –</span>
-        <h2 class="h2-quienes mb-5">¿Tenés dudas? Te respondemos al toque.</h2>
+        <span class="volanta-maridaje mb-3 text-center d-block">– CONTACTO –</span>
+        <h2 class="h2-maridaje mb-5 text-center">¿Tenes dudas? Te respondemos al toque.</h2>
       </div>
       <div class="col-lg-5 d-flex justify-content-center align-items-center mb-5 mb-lg-0">
-        <!-- Cambiá la ruta de la imagen a la tuya -->
-        <img src="IMAGENES/Rectangsssle-83.png" alt="Foto contacto" class="img-contacto">
+        <img src="IMAGENES/som.png" class="img-fluid maridaje-img" alt="Ficha Sensorial">
       </div>
       <div class="col-lg-7">
         <form class="contacto-form">
@@ -403,23 +496,25 @@
           <div class="mb-4">
             <textarea class="form-control form-control-custom" rows="4" placeholder="Mensaje"></textarea>
           </div>
-          <button type="submit" class="newsletter-btn-custom w-100">
-            Enviar mensaje <span style="margin-left: 24px; font-size: 1.35em;">→</span>
-          </button>
+          <a href="#" class="btn-pill-yellow btn-suscrip-custom mt-4 w-100 btn-ajuste-card">
+            ¡Lo quiero!
+            <span class="divider-vertical mx-3 d-none d-sm-inline"></span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
         </form>
       </div>
     </div>
   </div>
 </section>
+<!-- /CONTACTO -->
 
-<!-- CONTACTO -->
 
 
 <!-- newslet -->
 <section class="newsletter-section section-spacing bg-cover py-5 text-center">
   <div class="container">
-    <p class="volanta-custom mb-2">– SUSCRIBITE A NUESTRO NEWSLETTER –</p>
-    <h2 class="h2-custom mb-5">¡No te pierdas ninguna novedad!</h2>
+    <p class="volanta-maridaje mb-3 text-center d-block">– SUSCRIBITE A NUESTRO NEWSLETTER –</p>
+    <h2 class="h2-maridaje mb-5 text-center">¡No te pierdas ninguna novedad!</h2>
     <form class="newsletter-form-custom mx-auto">
       <input type="email" class="newsletter-input-custom" placeholder="Ingresá tu email">
       <button type="submit" class="newsletter-btn-custom">Suscribirse</button>
